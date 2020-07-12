@@ -291,6 +291,7 @@ button {
   display: flex;
   width: 100%;
   align-items: center;
+  text-decoration: none;
 }
 .sections .services .service-list .service-item .service-link .servise-logo {
   width: 90px;
