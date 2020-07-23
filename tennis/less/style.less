@@ -522,11 +522,24 @@ button {
     .service-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 56px -10px 0;
+        margin: 56px 0 0;
+        overflow-x: hidden;
+        overflow-y: auto;
         .item-wrapper {
             width: 50%;
             margin: 0 0 20px;
-            padding: 0 10px;
+            &:nth-child(1) {
+                padding: 0 10px 0 0;
+            }
+                        &:nth-child(2) {
+                padding: 0 0 0 10px;
+            }
+                        &:nth-child(3) {
+                padding: 0 10px 0 0;
+            }
+                        &:nth-child(4) {
+                padding: 0 0 0 10px;
+            }
             &:nth-child(2n){
                 .service-item {
                     .service-description {
@@ -661,13 +674,13 @@ button {
                 background-color: #fff;
                 padding: 0;
                 height: 0;
+                display: flex;
+                align-items: center;
 
                 img {
                     width: 100%;
                     height: auto;
-                    position: relative;
-                    top: 50%;
-                    transform: translateY(-50%);
+
                 }
             }
             &:hover {
@@ -1430,9 +1443,9 @@ button {
 
     .main .exp-descr .sections-description::after {
         top: -69px;
-        right: -117%;
+        right: -101%;
         background-image: url(../images/sportsmen.png);
-        width: 128%;
+        width: 114%;
         height: 555px;
         background-size: cover;
         background-repeat: no-repeat;
