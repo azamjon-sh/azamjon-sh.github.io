@@ -964,10 +964,10 @@ button {
     padding-right: 20px;
   }
   .main .exp-descr .sections-description::before {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 100%;
     bottom: unset;
-    top: 89px;
+    top: 56%;
     left: -50%;
   }
   .main .exp-descr .sections-description .section-title {
@@ -1051,7 +1051,7 @@ button {
   }
   .main .tc-ss .tc-ss-description .tc-ss-img {
     border-radius: 42px 0 0 42px;
-    width: auto;
+    width: 75%;
     height: auto;
     left: 25%;
     position: relative;
@@ -1063,7 +1063,7 @@ button {
     height: auto;
     position: relative;
     bottom: 0;
-    left: -37px;
+    left: -11.5%;
     width: 100%;
     max-width: 320px;
     max-height: unset;
@@ -1344,6 +1344,9 @@ button {
     line-height: 23px;
   }
   .main .exp-descr .sections-description::before {
+    height: 500px;
+    width: 500px;
+    bottom: unset;
     top: 89px;
     left: -50%;
   }
