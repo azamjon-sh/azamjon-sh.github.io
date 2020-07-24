@@ -314,16 +314,16 @@ button {
                 background-image: url(../images/back-square.svg);
                 background-repeat: repeat;
                 img {
-                   width: 100%;
-                   height: auto;
-                   position: relative;
-                   bottom: 0;
-                   left: -11.5%;
-               }
-           }
-       }
-   }
-   .visualization {
+                 width: 100%;
+                 height: auto;
+                 position: relative;
+                 bottom: 0;
+                 left: -11.5%;
+             }
+         }
+     }
+ }
+ .visualization {
     padding-top: 95px;
     background-color: #f1f1f1;
     .row {
@@ -626,11 +626,11 @@ button {
         line-height: 28px;
     }
     .clients-bl {
-     max-width: 1110px;
-     margin:0 auto;
-     position: relative;
-     z-index: 10;
-     .clients-list   {
+       max-width: 1110px;
+       margin:0 auto;
+       position: relative;
+       z-index: 10;
+       .clients-list   {
         margin: 50px -16px 0;
         min-height: 390px;
         .col-6 {
@@ -648,7 +648,7 @@ button {
                 font-size: 16px;
                 line-height: 24px;
                 color: #fff;
-                span{display:block;}
+                span{display:block;text-align: left;}
                 a{
                     text-decoration: none;
                     border-bottom: 1px dashed #fff;
@@ -738,7 +738,7 @@ button {
     background-color: #f1f1f1;
     padding-top: 95px;
     padding-bottom: 145px;
-    background-image:url(../images/submit-fon.png);
+    background-image:url(../images/submit-fon.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -791,13 +791,13 @@ button {
                 font-size: 18px;
                 line-height: 24px;
                 span{
-                 font-weight: bold;
-             }
-         }
-     }
+                   font-weight: bold;
+               }
+           }
+       }
 
- }
- .form-block {
+   }
+   .form-block {
     margin-top: 54px;
     width: 386px;
     background-color: #DE7C43;
@@ -807,9 +807,9 @@ button {
     transform: translateX(-100%);
     height: 514px;
     form {
-        width: 100%;
+        width: 98%;
         height: 540px;
-        margin:-13px 0;
+
         transform: translate(8px, -13px); 
         padding: 38px 30px 25px;
         background-color: #fff;
@@ -1271,10 +1271,12 @@ button {
                 width: 386px;
                 height: 415px;
                 max-width: 100%;
+                transform: none;
+                left :unset;
+                margin: 40px auto 0;
                 form {
-                    height: 431px;
-                    margin: -13px 0;
-                    padding: 20px 20px 15px;
+                    height: 441px;
+                    padding: 25px 20px 15px;
                     .form-title {
                         font-size: 18px;
                         line-height: 24px;
@@ -1374,7 +1376,7 @@ button {
             }
         }
         .tc-ss-description {
-         .tc-ss-img {
+           .tc-ss-img {
             max-width: 500px;
             left:45%;
             width: 55%;
@@ -1520,6 +1522,26 @@ button {
     .main .submit-app .submit-app-description {
         left:-20px;
     }
+    .main .submit-app .form-block {
+        display: inline-block;
+        transform: none;
+        left:unset;
+        float: right;
+        margin: 0;
+        margin-top: 40px;
+    }
+    .main .submit-app .form-block form{
+        padding: 34px 20px 15px;
+    }
+
+
+
+    .main .submit-app .submit-app-description {
+        width: 45%;
+        display: inline-block;
+        margin-top: 40px;
+        vertical-align: top;
+    }
 }
 @media (min-width: 1024px) {
     .section-title {
@@ -1541,7 +1563,7 @@ button {
                 transform: none;
                 max-width: 600px;
                 img {
-                    left: -14%;
+                    left: -13%;
                     width: 114%;
                     bottom: -2px;
                 }
@@ -1604,11 +1626,18 @@ button {
         background-position: top left;
         border-radius: 0 5px 5px 0;
         padding: 45px 40px;
+        display: block;
+        margin-top: 73px;
     }
     .main .submit-app .form-block {
         margin-top: 54px;
         width: 386px;
         height: 514px;
+        display: block;
+        left: 100%;
+        transform: translateX(-100%);
+        float: none;
+
         form {
             height: 540px;
             padding: 38px 30px 25px;
