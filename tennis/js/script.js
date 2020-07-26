@@ -48,6 +48,7 @@ jQuery(document).ready(function($) {
 		var visible = $('.clients-list').offset().top;
 		if ($(this).scrollTop() > visible - 500) {
 			$('.clients-list .clients-item').addClass('go-animate');
+		$('.clients-list .col-6').height($('.clients-list .col-6').width())
 		}
 	})
 
