@@ -29,6 +29,9 @@ header .burger-btn .material-icons {
   padding-top: 70px;
   margin: 0 auto;
 }
+.main-container .close-menu {
+  display: none;
+}
 .main-container .row .left-menu {
   width: 190px;
 }
@@ -214,6 +217,7 @@ header .burger-btn .material-icons {
     padding-top: 0;
   }
   .main-container .row .close-menu {
+    display: block;
     position: absolute;
     right: 20px;
     top: 20px;
