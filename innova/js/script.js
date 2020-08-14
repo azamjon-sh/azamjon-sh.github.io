@@ -1,31 +1,31 @@
 jQuery(document).ready(function($) {
-	$('.list-item').click(function() {
+	$('.sidebar__item').click(function() {
 		if (!$(this).hasClass('open')) {
-			$('.list-item').removeClass('open')
-			$('.list-item').children('.menu_list_1').slideUp()
+			$('.sidebar__item').removeClass('open')
+			$('.sidebar__item').children('.sidebar__list2').slideUp()
 			$(this).addClass('open')
-			$('.list-item.open .menu_list_1').slideDown();
+			$('.sidebar__item.open .sidebar__list2').slideDown();
 		}
 		else {
-			$('.list-item').removeClass('open')
-			$('.list-item').children('.menu_list_1').slideUp()
+			$('.sidebar__item').removeClass('open')
+			$('.sidebar__item').children('.sidebar__list2').slideUp()
 		}
 	});
 	$('.add-to-fav').click(function() {
+		$(this).toggleClass('select');
+	});
+	$('.movie__rating__like').click(function() {
 		$(this).toggleClass('chosed');
+		$('.movie__rating__dislike').removeClass('chosed')
 	});
-	$('.like').click(function() {
+	$('.movie__rating__dislike').click(function() {
 		$(this).toggleClass('chosed');
-		$('.dislike').removeClass('chosed')
+		$('.movie__rating__like').removeClass('chosed')
 	});
-	$('.dislike').click(function() {
-		$(this).toggleClass('chosed');
-		$('.like').removeClass('chosed')
+	$('.burger').click(function() {
+		$('.sidebar').addClass('opened')
 	});
-	$('.burger-btn').click(function() {
-		$('.menu').addClass('opened')
-	});
-	$('.close-menu').click(function() {
-		$('.menu').removeClass('opened')
+	$('.sidebar__close').click(function() {
+		$('.sidebar').removeClass('opened')
 	});
 });
