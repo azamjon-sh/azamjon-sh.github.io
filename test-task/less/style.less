@@ -10,6 +10,15 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+.section__title {
+	text-align: center;
+	font-size: 45px;
+	line-height: 56px;
+	letter-spacing: .15px;
+	color: #5A5A58;
+	margin-bottom: 27px;
+}
+
 .button	{
 	border: none;
 	outline: none;
@@ -44,37 +53,46 @@ ul {
 	list-style: none;
 }
 .header {
-	padding: 22px 0 15px;
-	background-color:#404040;
-	.header__list {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		.header__item {
-			cursor: pointer;
-			.phone {
-				font-size: 23px;
-				line-height: 26px;
-				font-weight: normal;
-				color: #FDC52B;
-				text-decoration: none;
-			}
-			.logotype {
-				text-decoration: none;
-			}
+	width: 100%;
+	position: fixed;
+	top : 0;
+	left: 0;
+	z-index: 10;
+	transition: all .3s;
+	&.out {
+		transform: translateY(-100%);
+	}
+	.header__top {
+		padding: 22px 0 15px;
+		background-color:#404040;
+		.header__list {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.header__item {
+				cursor: pointer;
+				.phone {
+					font-size: 23px;
+					line-height: 26px;
+					font-weight: normal;
+					color: #FDC52B;
+					text-decoration: none;
+				}
+				.logotype {
+					text-decoration: none;
+				}
 
+			}
 		}
 	}
-}
-.main {
-
 	.main__menu	{
+		background-color: #fff;
 		display: flex;
 		justify-content:center;
-
+		box-shadow: -5rem 3rem 9rem rgba(47,47,47,.21);
 		.menu__item	{
 			position: relative;
-			padding: 35px 0 20px 40px;
+			padding: 25px 0 20px 40px;
 			cursor: pointer;
 			.menu__link {
 				font-size: 18px;
@@ -95,7 +113,7 @@ ul {
 				content: "";
 				display: block;
 				position: absolute;
-				bottom: 2px;
+				bottom: 0;
 				left: 50%;
 				transform: translateX(-50%);
 				height: 1px;
@@ -110,18 +128,13 @@ ul {
 			}
 		}
 	}
+}
+.main {
+
+	margin-top: 170px;
 
 	.products {
 		padding-top: 80px;
-
-		.section__title {
-			text-align: center;
-			font-size: 45px;
-			line-height: 56px;
-			letter-spacing: .15px;
-			color: #5A5A58;
-			margin-bottom: 27px;
-		}
 
 		.products__categories {
 			display: flex;
@@ -288,5 +301,129 @@ ul {
 			line-height: 26px;
 		}
 	}
+	.contacts {
+		margin-bottom: 100px;
+		.contacts__info	{
+			margin-top: 40px;
+			display: flex;
+			justify-content: space-between;
+			.contacts__item {
+				border-radius: 4px;
+				width: 49%;
+				background-color: #F3F3F8;
+				display: flex;
 
+				.addresses {
+					width: 60%;
+					border-right:2px solid #E6E6EC;
+					padding: 45px 43px;
+					.loacate{
+						margin-bottom: 23px;
+						.locate__title {
+							font-size: 23px;
+							line-height: 32px;
+							letter-spacing: .15;
+							font-weight: 500;
+							margin-bottom: 16px;
+							color: #717582;
+						}
+						.locate__place {
+							display: flex;
+							vertical-align: middle;
+							img {
+								vertical-align: middle;
+								max-width: 20px;
+								max-height: 26px;
+								margin-right: 13px;
+							}
+
+							.locate__place__link {
+								font-size: 16px;
+								line-height: 25px;
+								letter-spacing: .25px;
+								color: #9494A2;
+								text-decoration: none;
+								display: inline-block;
+							}
+						}
+					}	
+				}
+				.contacts__logo {
+					.logo__block{
+						height: 60%;
+						padding: 45px 43px;
+
+					}
+					.logo__footer {
+						height: 40%;
+						border-top:2px solid #E6E6EC;
+						&>div{
+							border-right: 2px solid #E6E6EC;
+							width: 90px;
+							&>div{
+								border-bottom:2px solid #E6E6EC;
+								height: 45px;
+								&>div{
+									float: right;
+									width: 50%;
+									height: 100%;
+									background-color: #FDC42C;
+								}
+							}
+						}
+					}
+
+				}
+				.contacts__data {
+					border-right: 2px solid #E6E6EC;
+					width: 60%;
+					.questions {
+						padding: 45px 43px 0;
+
+						.questions__title {
+							font-size: 23px;
+							line-height: 32px;
+							letter-spacing: .15;
+							font-weight: 500;
+							margin-bottom: 30px;
+							color: #717582;
+						}
+						.questions__phone, 
+						.questions__mail {
+							display: flex;
+							vertical-align: middle;
+							margin-bottom: 25px;
+							img {
+								vertical-align: middle;
+								max-width: 20px;
+								max-height: 26px;
+								margin-right: 13px;
+							}
+
+							.questions__link {
+								font-size: 16px;
+								line-height: 25px;
+								letter-spacing: .25px;
+								color: #9494A2;
+								text-decoration: none;
+								display: inline-block;
+							}
+						}
+					}
+					.write__button {
+						margin: 90px auto 0;
+						width: auto;
+
+						.button {
+							color: #fff;
+							display: block;
+							margin-left: auto;
+							margin-right: auto;
+						}
+					}	
+				}
+			}
+		}
+	}
 }
+
