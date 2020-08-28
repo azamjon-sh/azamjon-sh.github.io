@@ -389,6 +389,7 @@ ul {
 .main .contacts .contacts__info .contacts__item .contacts__logo .logo__footer > div {
   border-right: 2px solid #E6E6EC;
   width: 90px;
+  height: 100%;
 }
 .main .contacts .contacts__info .contacts__item .contacts__logo .logo__footer > div > div {
   border-bottom: 2px solid #E6E6EC;
