@@ -1,0 +1,723 @@
+.header {
+  padding: 4px 0;
+}
+.header .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .header__menu .header__menu__item .header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+.header .header__menu .header__menu__item .header__list .header__list__item {
+  padding: 0 19px;
+}
+.header .header__menu .header__menu__item .header__list .header__list__item .header__list__link {
+  padding: 0 0 5px;
+  position: relative;
+  line-height: 100%;
+  font-size: 16px;
+  text-decoration: none;
+}
+.header .header__menu .header__menu__item .header__list .header__list__item .header__list__link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #e89f33;
+  -webkit-transition: width ease-in-out 0.3s;
+  transition: width ease-in-out 0.3s;
+}
+.header .header__menu .header__menu__item .header__list .header__list__item .header__list__link:hover:before {
+  width: 100%;
+}
+.header .header__menu .header__menu__item.header__menu__phone a {
+  font-family: Russo One;
+  font-size: 22px;
+  line-height: 100%;
+  color: #fcaf17;
+}
+.header .header__menu .header__menu__item .header__menu__link {
+  text-decoration: none;
+}
+.main .main__section {
+  margin-top: 50px;
+  position: relative;
+  padding: 130px 0 0;
+  z-index: 1;
+  background-image: url(../images/range.svg);
+  background-position: 0 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main .main__section .silver {
+  width: 100%;
+  z-index: 0;
+  left: 30%;
+  top: 0;
+  position: absolute;
+  width: auto;
+  height: 100%;
+}
+.main .main__section .silver .range {
+  height: 100%;
+  width: auto;
+  left: 0;
+}
+.main .main__section .silver .track {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.main .main__section .section__title {
+  margin-bottom: 50px;
+}
+.main .main__section .button {
+  margin-bottom: 100px;
+}
+.main .main__section .messenger {
+  margin-bottom: 40px;
+}
+.main .main__section .messenger .messenger__item {
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #333333;
+  margin-right: 25px;
+}
+.main .main__section .messenger .messenger__item span {
+  font-size: 16px;
+  color: #fcaf17;
+  margin-right: 2px;
+  vertical-align: middle;
+  line-height: 100%;
+}
+.main .section {
+  margin-top: 100px;
+}
+.main .section .section__title {
+  padding-bottom: 14px;
+  margin-bottom: 50px;
+  display: inline-block;
+}
+.main .section .section__title:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #e89f33;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+.main .section.lines .row {
+  margin: 0 -20px;
+}
+.main .section.lines .lines__item {
+  height: 316px;
+  padding: 0 20px;
+}
+.main .section.lines .lines__item .lines__item__wrapper {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 20px;
+}
+.main .section.lines .lines__item .lines__item__wrapper .lines__item__img {
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  margin-bottom: 14px;
+}
+.main .section.lines .lines__item .lines__item__wrapper .lines__item__img img {
+  width: 100%;
+  height: auto;
+}
+.main .section.lines .lines__item .lines__item__wrapper .lines__item__name {
+  font-size: 16px;
+  line-height: 23px;
+  display: block;
+  margin-bottom: 14px;
+  color: #333333;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-weight: normal;
+}
+.main .section.lines .lines__item .lines__item__wrapper .lines__item__descr {
+  opacity: 0;
+  max-width: 100%;
+  margin-bottom: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.main .section.lines .lines__item .lines__item__wrapper .lines__item__descr .lines__item__text {
+  font-size: 14px;
+  line-height: 18px;
+  text-indent: 12px;
+  color: #F2F2F2;
+}
+.main .section.lines .lines__item .lines__item__wrapper .lines__item__descr .lines__item__text span {
+  color: #fcaf17;
+}
+.main .section.lines .lines__item .lines__item__wrapper .lines__item__descr .lines__item__text:before {
+  content: '•';
+  display: inline;
+  margin: 0 3px;
+  color: #F2F2F2;
+}
+.main .section.lines .lines__item .lines__item__wrapper .button {
+  width: 100%;
+  opacity: 0;
+  display: none;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 14px 0;
+  font-weight: normal;
+}
+.main .section.lines .lines__item:hover .lines__item__wrapper {
+  background-color: #333333;
+}
+.main .section.lines .lines__item:hover .lines__item__wrapper .lines__item__img {
+  width: 64px;
+  height: 64px;
+}
+.main .section.lines .lines__item:hover .lines__item__wrapper .lines__item__name {
+  color: #F2F2F2;
+}
+.main .section.lines .lines__item:hover .lines__item__wrapper .lines__item__descr {
+  opacity: 1;
+}
+.main .section.lines .lines__item:hover .lines__item__wrapper .button {
+  opacity: 1;
+  display: block;
+}
+.main .section.service {
+  margin-top: 40px;
+}
+.main .section.service .row {
+  margin: 0 -20px;
+}
+.main .section.service .service__item {
+  height: auto;
+  padding: 0 20px;
+}
+.main .section.service .service__item .service__item__wrapper {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  padding: 20px;
+}
+.main .section.service .service__item .service__item__wrapper .service__item__img {
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  margin-bottom: 14px;
+}
+.main .section.service .service__item .service__item__wrapper .service__item__img img {
+  width: 100%;
+  height: auto;
+}
+.main .section.service .service__item .service__item__wrapper .service__item__name {
+  font-size: 16px;
+  line-height: 23px;
+  display: block;
+  margin-bottom: 14px;
+  color: #333333;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-weight: normal;
+}
+.main .section.about .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/map.webp);
+  height: 550px;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.main .section.about .content .section__title {
+  margin-bottom: 40px;
+}
+.main .section.about .content .about__left {
+  width: 426px;
+}
+.main .section.about .content .about__left .about__text {
+  font-size: 16px;
+  line-height: 21px;
+  color: #4F4F4F;
+}
+.main .section.about .content .about__right {
+  width: 320px;
+}
+.main .section.about .content .about__right .statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.main .section.about .content .about__right .statistics .statistics__item .statistics__number {
+  font-family: Russo One;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  color: #FCAF17;
+  margin-bottom: 6px;
+  margin-top: 30px;
+}
+.main .section.about .content .about__right .statistics .statistics__item .statistics__descr {
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+.main .section.trust .section__title {
+  margin-bottom: 70px;
+}
+.main .section.trust .trust__slider {
+  position: relative;
+  height: 400px;
+}
+.main .section.trust .trust__slider .slider__start {
+  width: 715px;
+  margin: 0 auto;
+}
+.main .section.trust .trust__slider .trust__slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 400px;
+}
+.main .section.trust .trust__slider .trust__slider__item .trust__item__image {
+  width: auto;
+  max-width: 300px;
+  max-height: 100%;
+}
+.main .section.trust .trust__slider .trust__slider__item .trust__item__descr {
+  width: 100%;
+  max-width: 400px;
+}
+.main .section.trust .trust__slider .trust__slider__item .trust__item__descr .trust__item__title {
+  font-size: 24px;
+  line-height: 31px;
+  color: #4F4F4F;
+  margin-bottom: 20px;
+}
+.main .section.trust .trust__slider .trust__slider__item .trust__item__descr .trust__item__text {
+  font-size: 16px;
+  line-height: 21px;
+  color: #828282;
+}
+.main .section.trust .trust__arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+.main .section.trust .trust__arrow .prevArr {
+  position: absolute;
+  width: 70px;
+  left: 0;
+  height: 70px;
+  background-image: url(../images/arrowleft.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.main .section.trust .trust__arrow .prevArr:hover {
+  background: url(../images/arrowright.svg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.main .section.trust .trust__arrow .nextArr {
+  position: absolute;
+  width: 70px;
+  right: 0;
+  height: 70px;
+  background-image: url(../images/arrowleft.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  cursor: pointer;
+}
+.main .section.trust .trust__arrow .nextArr:hover {
+  background-image: url(../images/arrowright.svg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.main .section.calculation {
+  min-height: 520px;
+  padding: 80px 0;
+  background-color: #333333;
+}
+.main .section.calculation .accordion .accordion__head {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main .section.calculation .accordion .accordion__head div {
+  width: auto;
+  padding-bottom: 12px;
+  font-size: 24px;
+  line-height: 31px;
+  color: #f2f2f2;
+  cursor: pointer;
+  border-bottom: 2px solid #F2F2F2;
+}
+.main .section.calculation .accordion .accordion__head div.active {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-color: #fcaf17;
+}
+.main .section.calculation .accordion .accordion__head div.accordion__head__costCalc {
+  padding-right: 25px;
+}
+.main .section.calculation .accordion .accordion__head div.accordion__head__callBack {
+  padding: 0 25px;
+}
+.main .section.calculation .accordion .accordeon__block .section__title {
+  color: #f2f2f2;
+  margin: 55px 0 65px;
+  letter-spacing: 1px;
+}
+.main .section.calculation .accordion .accordeon__block .section__title:before {
+  display: none;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc.hide {
+  display: none;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .costCalc__form__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .costCalc__form__main input {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+  padding-left: 0;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #E0E0E0;
+  border-bottom: 1px solid #BDBDBD;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .costCalc__form__main input:not(:last-child) {
+  margin-right: 20px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .costCalc__form__main input:focus {
+  outline: none;
+  border-color: #fcaf17;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .costCalc__form__main input::-webkit-input-placeholder {
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .costCalc__form__main input::-moz-placeholder {
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options__title {
+  font-size: 16px;
+  line-height: 22px;
+  color: #E0E0E0;
+  display: block;
+  width: auto;
+  margin: 32px 0;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options__title img {
+  margin-left: 24px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options__title.active img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options {
+  display: none;
+  margin-left: 0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input,
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+  padding-left: 0;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #E0E0E0;
+  border-bottom: 1px solid #BDBDBD;
+  display: block;
+  margin-bottom: 32px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input:not( :nth-child(3n)),
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div:not( :nth-child(3n)) {
+  margin-right: 20px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input:focus,
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div:focus {
+  outline: none;
+  border-color: #fcaf17;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input::-webkit-input-placeholder,
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div::-webkit-input-placeholder {
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input::-moz-placeholder,
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div::-moz-placeholder {
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input[type='number'],
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div[type='number'] {
+  -moz-appearance: textfield;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input::-webkit-outer-spin-button,
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div::-webkit-outer-spin-button,
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input::-webkit-inner-spin-button,
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options textarea {
+  overflow: none;
+  width: 100%;
+  height: 82px;
+  max-width: 100%;
+  padding-left: 0;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #E0E0E0;
+  border-bottom: 1px solid #BDBDBD;
+  display: block;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options textarea:focus {
+  outline: none;
+  border-color: #fcaf17;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options textarea::-webkit-input-placeholder {
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options textarea::-moz-placeholder {
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown {
+  position: relative;
+  display: block;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown .select {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown .select span {
+  font-size: 16px;
+  line-height: 22px;
+  color: #E0E0E0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown .select img {
+  margin-left: 25px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown .dropdown-menu {
+  padding: 0;
+  list-style: none;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown:hover {
+  outline: none;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown:focus {
+  outline: none;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown .dropdown-menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-top: 19px;
+  overflow: hidden;
+  display: none;
+  z-index: 9;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown .dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .dropdown .dropdown-menu li:hover {
+  background-color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes {
+  margin-top: 35px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes input {
+  width: 0;
+  height: 0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes input:before {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #E0E0E0;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  border: 1px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes input:checked:before {
+  background-color: #fcaf17;
+  background-image: url(../images/checked.svg);
+  border: none;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes span {
+  font-size: 16px;
+  line-height: 100%;
+  margin-left: 34px;
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .button {
+  margin-top: 50px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.callBack.hide {
+  display: none;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.callBack .callBack__form input {
+  display: block;
+  width: 385px;
+  padding-left: 0;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #E0E0E0;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #BDBDBD;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.callBack .callBack__form input:not(:last-child) {
+  margin-right: 20px;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.callBack .callBack__form input:focus {
+  outline: none;
+  border-color: #fcaf17;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.callBack .callBack__form input::-webkit-input-placeholder {
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.callBack .callBack__form input::-moz-placeholder {
+  color: #e0e0e0;
+}
+.main .section.calculation .accordion .accordeon__block .accorderon__item.callBack .callBack__form .button {
+  margin-top: 18px;
+}
+.main .section.contacts .section__title {
+  margin: 80px 0 60px;
+}
+.main .section.contacts .contacts__block .contacts__item .contacts__type {
+  font-size: 18px;
+  line-height: 23px;
+  color: #4F4F4F;
+  margin-bottom: 25px;
+}
+.main .section.contacts .contacts__block .contacts__item .contacts__link {
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+}
+.main .section.contacts .contacts__block .contacts__item.contacts__item__phone {
+  font-size: 24px;
+  line-height: 31px;
+}
+.main .map {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  margin-top: 80px;
+}
