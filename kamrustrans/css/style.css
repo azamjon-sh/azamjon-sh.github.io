@@ -52,6 +52,91 @@
 .header .header__menu .header__menu__item .header__menu__link {
   text-decoration: none;
 }
+.header .header__menu .header__menu__item.burger__btn {
+  display: none;
+  width: 26px;
+  height: 13px;
+}
+.header .header__menu .header__menu__item.burger__btn span {
+  height: 2px;
+  width: 100%;
+  display: block;
+  margin-bottom: 4px;
+  background-color: #e89f33;
+}
+.header .mobile {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+.header .mobile .mobile__menu {
+  padding-top: 40px;
+  position: relative;
+  width: 280px;
+  background-color: #f9f9f9;
+  height: 100%;
+}
+.header .mobile .mobile__menu .mobile__menu__item {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px 0 20px;
+}
+.header .mobile .mobile__menu .mobile__menu__item .mobile__menu__link {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0 10px;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  line-height: 100%;
+}
+.header .mobile .mobile__menu .mobile__menu__item .mobile__menu__link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #e89f33;
+  -webkit-transition: width ease-in-out 0.3s;
+  transition: width ease-in-out 0.3s;
+}
+.header .mobile .mobile__menu .mobile__menu__item .mobile__menu__link:hover:before {
+  width: 100%;
+}
+.header .mobile .mobile__menu .close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.header .mobile .mobile__menu .close span {
+  display: inline-block;
+  width: 100%;
+  left: 0;
+  height: 4px;
+  position: absolute;
+  background-color: #e89f33;
+  top: 10px;
+  border-radius: 2px;
+}
+.header .mobile .mobile__menu .close span.first {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.header .mobile .mobile__menu .close span.second {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 .main .main__section {
   margin-top: 50px;
   position: relative;
@@ -83,6 +168,8 @@
 }
 .main .main__section .button {
   margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
 }
 .main .main__section .messenger {
   margin-bottom: 40px;
@@ -306,7 +393,7 @@
   height: 400px;
 }
 .main .section.trust .trust__slider .slider__start {
-  width: 715px;
+  max-width: 715px;
   margin: 0 auto;
 }
 .main .section.trust .trust__slider .trust__slider__item {
@@ -428,6 +515,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .costCalc__form__main input {
   -ms-flex-preferred-size: 0;
@@ -624,6 +713,7 @@
   position: relative;
   padding: 0;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 .main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes input {
   width: 0;
@@ -715,4 +805,192 @@
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   margin-top: 80px;
+}
+@media (max-width: 1199px) {
+  .header .header__menu .header__menu__logo {
+    height: 40px;
+  }
+  .header .header__menu .header__menu__logo img {
+    height: 100%;
+  }
+  .header .header__menu .header__menu__item .header__list .header__list__item {
+    padding: 0 15px;
+  }
+  .header .header__menu .header__menu__item .header__list .header__list__item .header__list__link {
+    font-size: 15px;
+  }
+  .main .main__section {
+    padding-top: 60px;
+  }
+  .main .main__section .section__title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 991px) {
+  .header .header__menu .header__menu__logo {
+    height: 40px;
+  }
+  .header .header__menu .header__menu__logo img {
+    height: 100%;
+  }
+  .main .section .section__title {
+    padding-bottom: 8px;
+  }
+  .header .header__menu .header__menu__item .header__list .header__list__item {
+    padding: 0 15px;
+  }
+  .header .header__menu .header__menu__item .header__list .header__list__item .header__list__link {
+    font-size: 15px;
+  }
+  .header .header__menu .header__menu__item.burger__btn {
+    display: block;
+  }
+  .header__menu__list {
+    display: none;
+  }
+  .header .header__menu .header__menu__logo {
+    height: auto;
+  }
+  .main .main__section .button {
+    margin-bottom: 50px;
+  }
+  .main .main__section .silver .track {
+    height: 220px;
+  }
+  .main .section.about .content .about__right {
+    width: 250px;
+  }
+  .main .section.trust {
+    display: none;
+  }
+  .main .section.about .content {
+    height: auto;
+    background-size: cover;
+  }
+  .main .main__section {
+    background: none;
+  }
+  .main .main__section .silver .track {
+    left: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .main .section.calculation {
+    padding: 50px 0 40px;
+  }
+  .main .section.calculation .accordion .accordion__head div.accordion__head__costCalc {
+    padding-right: 13px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .main .section.calculation .accordion .accordion__head div.accordion__head__callBack {
+    padding-right: 0;
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 13px;
+  }
+  .main .section.calculation .accordion .accordeon__block .section__title {
+    margin: 30px 0;
+  }
+  .main .section.about .content .about__left {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main .section.about .content .about__right {
+    width: 100%;
+  }
+  .main .section.about .content .about__right .statistics {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .main .section.about .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .section.about .content .about__right .statistics .statistics__item .statistics__number {
+    margin-top: 20px;
+  }
+  .main .section.contacts .section__title {
+    margin: 0;
+  }
+  .main .section {
+    margin-top: 70px;
+  }
+  .main .map {
+    margin-top: 40px;
+  }
+  .main .main__section {
+    padding-top: 0;
+  }
+  .main .main__section .section__title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .main .main__section .silver {
+    position: relative;
+    margin-bottom: 35px;
+    height: 220px;
+    overflow-y: hidden;
+  }
+  .main .main__section .silver .track {
+    -webkit-transform: unset;
+            transform: unset;
+    left: 20px;
+    height: 100%;
+    top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > input,
+  .main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .row > div {
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+            flex: 0 0 100%;
+    max-width: 340px;
+    margin-bottom: 30px;
+  }
+  .main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .costCalc__form__main input {
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+            flex: 0 0 100%;
+    max-width: 340px;
+    margin-bottom: 30px;
+  }
+  .main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes label {
+    height: auto;
+  }
+  .main .section.calculation .accordion .accordeon__block .accorderon__item.costCalc .costCalc__form .options .checkboxes span {
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 15px;
+  }
+}
+@media (max-width: 430px) {
+  .main .section.calculation .accordion .accordion__head div.accordion__head__costCalc,
+  .main .section.calculation .accordion .accordion__head div.accordion__head__callBack {
+    font-size: 15px;
+  }
+  .header .header__menu .header__menu__logo {
+    height: 32px;
+  }
+  .header .header__menu .header__menu__item.header__menu__phone a {
+    font-size: 16px;
+  }
+  .header .header__menu .header__menu__item.burger__btn {
+    width: 25px;
+  }
+  form .button {
+    width: 100%;
+    max-width: 300px;
+  }
 }
