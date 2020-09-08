@@ -75,4 +75,11 @@ jQuery(document).ready(function($) {
       i = true;
     }
   });  
+  $('.burger__btn'). click(function() {
+      $('.mobile').addClass('hide')
+    })
+  $('.mobile__menu .close'). click(function() {
+      $('.mobile').removeClass('hide')
+      
+  });
 });

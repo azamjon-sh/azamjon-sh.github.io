@@ -69,7 +69,15 @@
 	}
 
 	.mobile {
-		transform: translateX(-100%);
+		&.hide{
+			display: block;
+			opacity: 1;
+			.mobile__menu {
+				transform: translateX(0);
+			}
+		}
+		display: none;
+		opacity: 0;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -77,10 +85,12 @@
 		height: 100%;
 		background-color: rgba(0,0,0,.7);
 		z-index: 10;
+		transition: opacity .2s;
 		.mobile__menu {
+			transform: translateX(-100%);
+			transition: transform .3s;
 			padding-top: 40px;
 			position: relative;
-
 			width: 280px;
 			background-color: #f9f9f9;
 			height: 100%;
@@ -192,8 +202,8 @@
 					font-size: 16px;
 					color: @light;
 					margin-right: 2px;
-					vertical-align: middle;
 					line-height: 100%;
+					margin-right:5px;
 
 				}
 			}
@@ -957,7 +967,7 @@
 	}
 	.main .main__section .silver .track {
 		transform: unset;
-		left: 20px;
+		left: 0px;
 		height: 100%;
 		top: 0;
 
