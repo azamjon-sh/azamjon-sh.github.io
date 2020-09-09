@@ -64,4 +64,24 @@ jQuery(document).ready(function($) {
     }
     scrollPrev = scrolled;
   });
+  $('.burger__btn'). click(function() {
+    $('.main__menu').addClass('hide')
+  })
+  $('.main__menu .close'). click(function() {
+    $('.main__menu').removeClass('hide')
+    
+  });
+  if (window.innerWidth < 476) {
+    $('.header .header__top .header__item .button').text('ЗАКАЗАТЬ')
+  }
+  $(window).resize(function() {
+    if (window.innerWidth < 476) {
+      $('.header .header__top .header__item .button').text('ЗАКАЗАТЬ')
+    }
+    else {
+      $('.header .header__top .header__item .button').text('Оставить заявку')
+
+    }
+  });
+
 });
