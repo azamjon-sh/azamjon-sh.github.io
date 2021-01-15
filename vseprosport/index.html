@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vseprosport</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="content">
+        <div class="header__wrapper">
+            <div class="header__block header__logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <div class="header__block header__menu">
+                <a href="#" class="header__item">Прогнозы</a>
+                <a href="#" class="header__item">Прогнозы от экспертов</a>
+                <a href="#" class="header__item">Рейтинг букмекеров</a>
+                <a href="#" class="header__item">Бонусы</a>
+                <a href="#" class="header__item">Экспрессы</a>
+                <a href="#" class="header__item">Новости</a>
+                <a href="#" class="header__item">Еще...</a>
+            </div>
+            <div class="header__block header__prize">
+                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M13.2516 4.3382C12.9853 4.60919 12.3417 5.04419 11.5604 5.35718C10.8391 5.64718 10.3684 5.67618 10.1935 5.64118C10.1601 5.46418 10.1886 4.98519 10.4726 4.2512C10.7801 3.45621 11.2076 2.80121 11.4749 2.53022C11.9643 2.03122 12.7622 2.03122 13.2516 2.53022C13.4894 2.77122 13.6192 3.09221 13.6192 3.43421C13.6192 3.7752 13.4894 4.0962 13.2516 4.3382ZM8.05317 5.64118C7.87825 5.67618 7.40754 5.64718 6.68625 5.35718C5.90501 5.04419 5.26232 4.60919 4.99503 4.3382C4.7582 4.0962 4.6275 3.7752 4.6275 3.43421C4.6275 3.09221 4.7582 2.77122 4.99503 2.53022C5.24071 2.28122 5.56205 2.15622 5.88339 2.15622C6.20571 2.15622 6.52705 2.28122 6.77272 2.53022C7.03903 2.80122 7.46651 3.45621 7.77409 4.2512C8.05809 4.98519 8.08659 5.46418 8.05317 5.64118ZM16.4837 6.13917H15.4332H14.4495C14.5596 6.04717 14.6608 5.95518 14.7502 5.86318C16.067 4.52419 16.067 2.34422 14.7502 1.00424C13.4344 -0.334746 11.2921 -0.334746 9.97532 1.00424C9.71393 1.27023 9.41027 1.68223 9.12333 2.17422C8.83638 1.68223 8.53273 1.27023 8.27133 1.00424C6.95452 -0.334746 4.81323 -0.334746 3.49642 1.00424C2.17961 2.34422 2.17961 4.52419 3.49642 5.86318C3.58585 5.95518 3.68805 6.04717 3.79713 6.13917H2.5668H1.5163C0.679041 6.13917 0 6.82916 0 7.68115V9.58113C0 10.2671 0.441229 10.8481 1.0505 11.0481V18.457C1.0505 19.309 1.72954 20 2.5668 20H7.30436V7.55116C7.30436 7.17716 7.60212 6.87516 7.96866 6.87516H10.0313C10.3979 6.87516 10.6956 7.17716 10.6956 7.55116V20H15.4332C16.2714 20 16.9495 19.309 16.9495 18.457V11.0481C17.5588 10.8481 18 10.2671 18 9.58113V7.68115C18 6.82916 17.321 6.13917 16.4837 6.13917Z"
+                          fill="#248CF7"/>
+                </svg>
+            </div>
+            <div class="header__block">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M13.3184 13.3184C15.6749 10.9619 15.6749 7.14116 13.3184 4.78463C10.9618 2.42809 7.14112 2.42809 4.78458 4.78463C2.42805 7.14116 2.42805 10.9619 4.78458 13.3184C7.14112 15.6749 10.9618 15.6749 13.3184 13.3184Z"
+                          stroke="black" stroke-width="2"/>
+                    <path d="M13.3184 13.3183L17.5853 17.5852" stroke="black" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+            </div>
+            <div class="header__block header__auth">
+                <button class="btn">Войти</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="content">
+        <section class="main__section">
+            <div class="main__head">
+                <h1 class="main__title">Матч центр</h1>
+                <span class="breadcrumb">
+                <a href="#" class="breadcrumb__link">Главная</a>
+                /
+                <a href="#" class="breadcrumb__link active">Матч центр</a>
+            </span>
+            </div>
+            <div class="sport__list">
+                <div class="sport__item">
+                    <div class="sport__wrapper">
+                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M22.3769 29.7095L23.5265 26.1711H27.2391C25.8914 27.6661 24.2372 28.8784 22.3769 29.7095ZM13.0388 30.5396L11.3447 25.3231L13.7494 21.935H19.2506L21.6553 25.3231L19.9612 30.5396C18.8515 30.8123 17.6929 30.9586 16.4995 30.9586C15.3071 30.9586 14.1485 30.8123 13.0388 30.5396ZM5.76094 26.1711H9.4735L10.6231 29.7095C8.76284 28.8784 7.10861 27.6661 5.76094 26.1711ZM11.0491 3.1094L15.4793 6.32828V10.3066L11.0083 13.5553L7.13748 12.3749L5.4514 7.18525C6.94936 5.41059 8.86735 4.00021 11.0491 3.1094ZM19.5114 2.35792L16.5005 4.54664L13.4886 2.35792C14.4601 2.1509 15.4674 2.04141 16.4995 2.04141C17.5326 2.04141 18.5399 2.1509 19.5114 2.35792ZM27.5486 7.18525L25.8625 12.3749L21.9917 13.5553L17.5207 10.3066V6.32728L21.9509 3.1094C24.1327 4.00121 26.0506 5.41059 27.5486 7.18525ZM27.8691 12.8059L29.0177 9.27046C30.013 10.9874 30.666 12.9273 30.881 14.9946L27.8691 12.8059ZM13.9644 19.8936L12.3968 15.0702L16.5005 12.0882L20.6032 15.0702L19.0366 19.8936H13.9644ZM5.1309 12.8059L2.11905 14.9946C2.33404 12.9273 2.98697 10.9874 3.9823 9.27046L5.1309 12.8059ZM9.68849 24.1297H4.22316C3.01484 22.1928 2.25143 19.9503 2.07923 17.5466L6.51938 14.3207L10.3902 15.5012L12.0932 20.7426L9.68849 24.1297ZM23.3125 24.1297L20.9068 20.7426L22.6098 15.5012L26.4806 14.3207L30.9208 17.5466C30.7486 19.9503 29.9852 22.1928 28.7768 24.1297H23.3125ZM28.1677 4.8333C25.0503 1.71694 20.9068 0 16.4995 0C12.0922 0 7.94867 1.71694 4.8323 4.8333C1.71594 7.94966 0 12.0932 0 16.5005C0 20.9078 1.71594 25.0513 4.8323 28.1677C7.94867 31.2841 12.0922 33 16.4995 33C20.9068 33 25.0503 31.2841 28.1677 28.1677C31.2841 25.0513 33 20.9078 33 16.5005C33 12.0932 31.2841 7.94966 28.1677 4.8333Z"
+                                  fill="black"/>
+                        </svg>
+
+                        <span class="sport__name">
+                        Футбол
+                    </span>
+                        <span class="sport__news">127</span>
+                    </div>
+                </div>
+                <div class="sport__item">
+                    <div class="sport__wrapper">
+                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M30.9586 30.5768C30.9586 30.7642 30.8023 30.9231 30.6182 30.9231H22.6088C22.2475 30.9231 21.714 30.588 21.5528 30.2589L20.859 28.8463H30.6182C30.8023 28.8463 30.9586 29.0052 30.9586 29.1926V30.5768ZM11.4462 30.2589C11.285 30.588 10.7525 30.9231 10.3902 30.9231H2.38082C2.19668 30.9231 2.04042 30.7642 2.04042 30.5768V29.1926C2.04042 29.0042 2.19668 28.8463 2.38082 28.8463H12.14L11.4462 30.2589ZM19.8398 26.7694L17.6401 22.2906L28.1289 0.928565L26.3035 0L16.4995 19.9667L6.69655 0L4.87013 0.928565L15.3589 22.2906L13.1602 26.7694H2.38082C1.06798 26.7694 0 27.8559 0 29.1926V30.5768C0 31.9125 1.06798 33 2.38082 33H10.3902C11.5259 33 12.765 32.2203 13.2727 31.1864L16.4995 24.6146L19.7263 31.1864C20.234 32.2203 21.4731 33 22.6088 33H30.6182C31.932 33 33 31.9125 33 30.5768V29.1926C33 27.8559 31.932 26.7694 30.6182 26.7694H19.8398Z"
+                                  fill="black"/>
+                        </svg>
+                        <span class="sport__name">
+                        Хоккей
+                    </span>
+                    </div>
+                </div>
+                <div class="sport__item">
+                    <div class="sport__wrapper">
+                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M27.6403 15.6678C27.0396 16.2685 26.3918 16.7948 25.7119 17.2418L23.3747 14.9035L26.8769 11.4021L29.2141 13.7394C28.7672 14.4204 28.2399 15.0682 27.6403 15.6678ZM12.6079 16.0937C13.0026 17.062 13.5761 17.9348 14.3203 18.6791C15.0565 19.4153 15.9383 19.9908 16.9176 20.3876L10.7277 22.2719L12.6079 16.0937ZM17.3314 5.35855C17.931 4.75791 18.5798 4.23159 19.2588 3.78463L21.597 6.1219L18.0947 9.62429L15.7576 7.28702C16.2045 6.60603 16.7308 5.95818 17.3314 5.35855ZM25.6034 2.11529L23.0533 4.6655L21.1651 2.77821C22.3141 2.30915 23.5053 2.06005 24.6754 2.06005C24.9927 2.06005 25.3021 2.07914 25.6034 2.11529ZM19.5511 11.0807L23.0533 7.5783L25.4196 9.9457L21.9184 13.4471L19.5511 11.0807ZM14.0903 11.7315C14.1476 11.2364 14.247 10.7432 14.3856 10.2541L14.4378 10.0833C14.5262 9.78399 14.6317 9.48668 14.7512 9.1934L16.6384 11.0807L14.0873 13.6309C14.014 13.0262 14.013 12.3904 14.0903 11.7315ZM17.1396 18.2271C16.6374 17.9609 16.1804 17.6254 15.7766 17.2227C15.3739 16.8189 15.0384 16.3619 14.7723 15.8597L18.0947 12.5371L20.462 14.9035L17.1396 18.2271ZM22.9147 18.5616L22.6696 18.6359C21.8822 18.8528 21.0847 18.9663 20.2973 18.9663C19.9789 18.9663 19.6696 18.9473 19.3683 18.9101L21.9184 16.3609L23.8056 18.2482C23.5113 18.3687 23.215 18.4742 22.9157 18.5646L22.9147 18.5616ZM30.1994 5.1667L26.8769 8.4893L24.5096 6.1219L27.8321 2.7993C28.3343 3.06547 28.7913 3.39994 29.195 3.80371C29.5978 4.20648 29.9332 4.6645 30.1994 5.1667ZM30.8814 9.29484C30.7819 10.1516 30.5569 11.0044 30.2205 11.833L28.3333 9.9457L30.8834 7.39449C30.9577 7.99915 30.9587 8.63595 30.8814 9.29484ZM30.6514 2.34731C29.1378 0.833663 27.0155 0 24.6754 0C21.5618 0 18.3539 1.42225 15.8751 3.90215C14.2179 5.55842 13.0307 7.54013 12.4261 9.61826L8.26898 23.2733L0 31.5436L1.45634 33L9.72531 24.7297L23.3446 20.5844C25.4246 19.9848 27.4263 18.7956 29.0966 17.1242C31.2469 14.9748 32.6069 12.279 32.9273 9.53289C33.2587 6.69843 32.4502 4.14622 30.6514 2.34731Z"
+                                  fill="black"/>
+                        </svg>
+                        <span class="sport__name">
+                        Тенис
+                    </span>
+                        <span class="sport__news">3</span>
+
+                    </div>
+                </div>
+                <div class="sport__item">
+                    <div class="sport__wrapper">
+                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M17.5207 15.4793V11.497C21.2641 11.281 24.8523 9.88358 27.8084 7.48982C29.6388 9.77708 30.7197 12.5421 30.9228 15.4793H17.5207ZM17.5207 21.503V17.5207H30.9228C30.7197 20.4579 29.6398 23.2229 27.8094 25.5112C24.8523 23.1174 21.2641 21.719 17.5207 21.503ZM17.5207 23.5484C20.7515 23.7584 23.851 24.9657 26.4239 27.0161C23.9774 29.3282 20.86 30.6918 17.5207 30.9228V23.5484ZM15.4793 23.5484V30.9228C12.14 30.6918 9.02362 29.3272 6.57711 27.0161C9.15002 24.9657 12.2485 23.7584 15.4793 23.5484ZM15.4793 17.5207V21.503C11.7369 21.719 8.14873 23.1174 5.19261 25.5102C3.3204 23.1642 2.28328 20.3673 2.08421 17.5207H15.4793ZM15.4793 11.497V15.4793H2.08421C2.28427 12.6337 3.3204 9.8358 5.19261 7.48982C8.14873 9.88358 11.7369 11.282 15.4793 11.497ZM15.4793 9.4526C12.2485 9.24159 9.15002 8.03426 6.57711 5.98489C9.02362 3.67275 12.14 2.30915 15.4793 2.07724V9.4526ZM17.5207 2.07724C20.86 2.30915 23.9774 3.67275 26.4229 5.98489C23.85 8.03526 20.7515 9.24159 17.5207 9.4526V2.07724ZM28.1677 4.8333C25.0513 1.71694 20.9078 0 16.5005 0C12.0932 0 7.94966 1.71694 4.8333 4.8333C1.71594 7.94966 0 12.0932 0 16.5005C0 20.9078 1.71694 25.0513 4.8333 28.1677C7.94966 31.2841 12.0932 33 16.5005 33C20.9078 33 25.0513 31.2841 28.1677 28.1677C31.2841 25.0513 33 20.9078 33 16.5005C33 12.0932 31.2841 7.94966 28.1677 4.8333Z"
+                                  fill="black"/>
+                        </svg>
+                        <span class="sport__name">
+                        Баскетбол
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="topMatch">
+                <div class="topMatch__title">
+                    Топ матчи
+                </div>
+                <div class="topMatch__wrapper">
+                    <div class="topMatch__slider">
+                        <div class="topMatch__item">
+                            <div class="topMatch__top">
+                                <div class="topMatch__game">
+                                    <div class="topMatch__command">
+                                        <img src="img/Team1.png" class="topMatch__icon"/>
+                                        <div class="topMatch__name">Сангджу Сангму</div>
+                                    </div>
+                                    <div class="topMatch__command">
+                                        <img src="img/Team2.png" class="topMatch__icon"/>
+                                        <div class="topMatch__name">Гангвон</div>
+                                    </div>
+                                </div>
+                                <div class="topMatch__date">
+                                    <div class="topMatch__time">20:00 <br>
+                                        19.07.20
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="topMatch__bottom">
+                                <div class="topMatch__coefficient">3.38</div>
+                                <div class="topMatch__coefficient">3.38</div>
+                                <div class="topMatch__coefficient">3.38</div>
+                            </div>
+                        </div>
+                        <div class="topMatch__item">
+                            <div class="topMatch__top">
+                                <div class="topMatch__game">
+                                    <div class="topMatch__command">
+                                        <img src="img/Team1.png" class="topMatch__icon"/>
+                                        <div class="topMatch__name">Сангджу Сангму</div>
+                                    </div>
+                                    <div class="topMatch__command">
+                                        <img src="img/Team2.png" class="topMatch__icon"/>
+                                        <div class="topMatch__name">Гангвон</div>
+                                    </div>
+                                </div>
+                                <div class="topMatch__date">
+                                    <div class="topMatch__time">20:00 <br>
+                                        19.07.20
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="topMatch__bottom">
+                                <div class="topMatch__coefficient">3.38</div>
+                                <div class="topMatch__coefficient">3.38</div>
+                                <div class="topMatch__coefficient">3.38</div>
+                            </div>
+                        </div>
+                        <div class="topMatch__item">
+                            <div class="topMatch__top">
+                                <div class="topMatch__game">
+                                    <div class="topMatch__command">
+                                        <img src="img/Team1.png" class="topMatch__icon"/>
+                                        <div class="topMatch__name">Сангджу Сангму</div>
+                                    </div>
+                                    <div class="topMatch__command">
+                                        <img src="img/Team2.png" class="topMatch__icon"/>
+                                        <div class="topMatch__name">Гангвон</div>
+                                    </div>
+                                </div>
+                                <div class="topMatch__date">
+                                    <div class="topMatch__time">20:00 <br>
+                                        19.07.20
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="topMatch__bottom">
+                                <div class="topMatch__coefficient">3.38</div>
+                                <div class="topMatch__coefficient">3.38</div>
+                                <div class="topMatch__coefficient">3.38</div>
+                            </div>
+                        </div>
+                        <div class="topMatch__item">
+                            <div class="topMatch__top">
+                                <div class="topMatch__game">
+                                    <div class="topMatch__command">
+                                        <img src="img/Team1.png" class="topMatch__icon"/>
+                                        <div class="topMatch__name">Сангджу Сангму</div>
+                                    </div>
+                                    <div class="topMatch__command">
+                                        <img src="img/Team2.png" class="topMatch__icon"/>
+                                        <div class="topMatch__name">Гангвон</div>
+                                    </div>
+                                </div>
+                                <div class="topMatch__date">
+                                    <div class="topMatch__time">20:00 <br>
+                                        19.07.20
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="topMatch__bottom">
+                                <div class="topMatch__coefficient">3.38</div>
+                                <div class="topMatch__coefficient">3.38</div>
+                                <div class="topMatch__coefficient">3.38</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="next"></div>
+                    <div class="prev"></div>
+                </div>
+            </div>
+            <nav class="category">
+                <div class="category__list">
+                    <div class="category__item">
+                        Все
+                        <span class="category__news">127</span>
+                    </div>
+                    <div class="category__item">
+                        Live
+                        <span class="category__news">2</span>
+                    </div>
+                    <div class="category__item">Завершенные
+                        <span class="category__news">57</span>
+                    </div>
+                    <div class="category__item">Запланированные
+                        <span class="category__news">73</span>
+                    </div>
+                    <div class="category__item">С прогнозами</div>
+                    <div class="category__item">Лучшие коэффиценты</div>
+                </div>
+                <div class="category__date">
+                    <ul class="date-list">
+                        <li class="date__item">15.06.2020, Пт</li>
+                        <li class="date__item">16.06.2020, Сб</li>
+                        <li class="date__item">17.06.2020, Вс</li>
+                        <li class="date__item">18.06.2020, Пн</li>
+                    </ul>
+                    <span class="category__date-checked">15.06.2020, Пт</span>
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                              fill="#248CF7"/>
+                    </svg>
+
+
+                </div>
+            </nav>
+            <div class="favorite">
+                <div class="favorite__match">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.57845 3.37303C8.66174 3.5361 8.82266 3.64913 9.00892 3.67525L12.5098 4.16676C12.9788 4.23264 13.1661 4.78955 12.8267 5.10915L10.2935 7.49504C10.1587 7.6219 10.0972 7.80485 10.129 7.98405L10.7271 11.3529C10.8072 11.8042 10.3169 12.1484 9.89731 11.9353L6.76609 10.3448C6.59951 10.2602 6.40052 10.2602 6.23394 10.3448L3.10272 11.9353C2.68318 12.1484 2.19286 11.8042 2.27298 11.3529L2.87103 7.98405C2.90284 7.80485 2.84131 7.6219 2.70653 7.49504L0.173273 5.10915C-0.166058 4.78955 0.0212003 4.23264 0.490242 4.16676L3.9911 3.67525C4.17727 3.64913 4.33829 3.5361 4.42158 3.37303L5.98724 0.307984C6.19696 -0.102661 6.80307 -0.102661 7.01279 0.307984L8.57845 3.37303Z"
+                              fill="#248CF7"/>
+                    </svg>
+                    Мои матчи<span>3</span>
+                </div>
+                <div class="favorite__tour">
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.70504 11.8461L5.47035 9.51837C5.18739 9.31499 4.81261 9.31499 4.52965 9.51837L1.29496 11.8461C0.748461 12.239 0 11.8343 0 11.1454V0.852916C0 0.382268 0.36937 0 0.824063 0H9.17594C9.63063 0 10 0.382268 10 0.852916V11.1454C10 11.8343 9.25154 12.239 8.70504 11.8461Z"
+                              fill="#DE0505"/>
+                    </svg>
+                    Мои турниры<span>2</span>
+                </div>
+            </div>
+            <div class="match">
+                <div class="match__head">
+                    <div class="match__flag"><img src="img/germ.png" alt=""></div>
+                    <div class="match__name active">Кубок Германии. 1/2 финала
+                        <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.70504 11.8461L5.47035 9.51837C5.18739 9.31499 4.81261 9.31499 4.52965 9.51837L1.29496 11.8461C0.748461 12.239 0 11.8343 0 11.1454V0.852916C0 0.382268 0.36937 0 0.824063 0H9.17594C9.63063 0 10 0.382268 10 0.852916V11.1454C10 11.8343 9.25154 12.239 8.70504 11.8461Z"
+                                  fill="#DE0505"/>
+                        </svg>
+
+                    </div>
+                    <div class="match__prognosis">Прогнозы</div>
+                    <div class="match__th1">1</div>
+                    <div class="match__th1">X</div>
+                    <div class="match__th1">2</div>
+                </div>
+                <div class="match__info">
+                    <div class="star blue">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.57845 3.37303C8.66174 3.5361 8.82266 3.64913 9.00892 3.67525L12.5098 4.16676C12.9788 4.23264 13.1661 4.78955 12.8267 5.10915L10.2935 7.49504C10.1587 7.6219 10.0972 7.80485 10.129 7.98405L10.7271 11.3529C10.8072 11.8042 10.3169 12.1484 9.89731 11.9353L6.76609 10.3448C6.59951 10.2602 6.40052 10.2602 6.23394 10.3448L3.10272 11.9353C2.68318 12.1484 2.19286 11.8042 2.27298 11.3529L2.87103 7.98405C2.90284 7.80485 2.84131 7.6219 2.70653 7.49504L0.173273 5.10915C-0.166058 4.78955 0.0212003 4.23264 0.490242 4.16676L3.9911 3.67525C4.17727 3.64913 4.33829 3.5361 4.42158 3.37303L5.98724 0.307984C6.19696 -0.102661 6.80307 -0.102661 7.01279 0.307984L8.57845 3.37303Z"
+                                  fill="#cbcbcb"/>
+                        </svg>
+                    </div>
+                    <div class="time">21:45</div>
+                    <div class="status red">Окончен</div>
+                    <div class="commands colors">
+                        Динамо Др<span>0 : 3</span>Гройтер Фюрт
+                    </div>
+                    <div class="live">
+                        <span><img src="img/Play.svg" alt="">Трансляция</span>
+                    </div>
+                    <div class="prognoz">2</div>
+                    <div class="bookmaker xbet">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#cbcbcb"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap.png" alt=""></div>
+
+                    </div>
+                    <div class="bookmaker winline red">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap-1.png" alt=""></div>
+                    </div>
+                    <div class="bookmaker marafon">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap-2.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="match__head">
+                    <div class="match__flag"><img src="img/germ.png" alt=""></div>
+                    <div class="match__name">Кубок Германии. 1/2 финала
+                        <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.70504 11.8461L5.47035 9.51837C5.18739 9.31499 4.81261 9.31499 4.52965 9.51837L1.29496 11.8461C0.748461 12.239 0 11.8343 0 11.1454V0.852916C0 0.382268 0.36937 0 0.824063 0H9.17594C9.63063 0 10 0.382268 10 0.852916V11.1454C10 11.8343 9.25154 12.239 8.70504 11.8461Z"
+                                  fill="#DE0505"/>
+                        </svg>
+
+                    </div>
+                    <div class="match__prognosis">Прогнозы</div>
+                    <div class="match__th1">1</div>
+                    <div class="match__th1">X</div>
+                    <div class="match__th1">2</div>
+                </div>
+                <div class="match__info">
+                    <div class="star">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.57845 3.37303C8.66174 3.5361 8.82266 3.64913 9.00892 3.67525L12.5098 4.16676C12.9788 4.23264 13.1661 4.78955 12.8267 5.10915L10.2935 7.49504C10.1587 7.6219 10.0972 7.80485 10.129 7.98405L10.7271 11.3529C10.8072 11.8042 10.3169 12.1484 9.89731 11.9353L6.76609 10.3448C6.59951 10.2602 6.40052 10.2602 6.23394 10.3448L3.10272 11.9353C2.68318 12.1484 2.19286 11.8042 2.27298 11.3529L2.87103 7.98405C2.90284 7.80485 2.84131 7.6219 2.70653 7.49504L0.173273 5.10915C-0.166058 4.78955 0.0212003 4.23264 0.490242 4.16676L3.9911 3.67525C4.17727 3.64913 4.33829 3.5361 4.42158 3.37303L5.98724 0.307984C6.19696 -0.102661 6.80307 -0.102661 7.01279 0.307984L8.57845 3.37303Z"
+                                  fill="#cbcbcb"/>
+                        </svg>
+                    </div>
+                    <div class="time">21:45</div>
+                    <div class="status green">56мин</div>
+                    <div class="commands">
+                        Динамо Др<span>0 : 3</span>Гройтер Фюрт
+                    </div>
+                    <div class="live">
+                        <span><img src="img/Play.svg" alt="">Трансляция</span>
+                    </div>
+                    <div class="prognoz">2</div>
+                    <div class="bookmaker xbet">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap.png" alt=""></div>
+
+                    </div>
+                    <div class="bookmaker winline red">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap-1.png" alt=""></div>
+                    </div>
+                    <div class="bookmaker marafon">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap-2.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="match__info">
+                    <div class="star blue">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.57845 3.37303C8.66174 3.5361 8.82266 3.64913 9.00892 3.67525L12.5098 4.16676C12.9788 4.23264 13.1661 4.78955 12.8267 5.10915L10.2935 7.49504C10.1587 7.6219 10.0972 7.80485 10.129 7.98405L10.7271 11.3529C10.8072 11.8042 10.3169 12.1484 9.89731 11.9353L6.76609 10.3448C6.59951 10.2602 6.40052 10.2602 6.23394 10.3448L3.10272 11.9353C2.68318 12.1484 2.19286 11.8042 2.27298 11.3529L2.87103 7.98405C2.90284 7.80485 2.84131 7.6219 2.70653 7.49504L0.173273 5.10915C-0.166058 4.78955 0.0212003 4.23264 0.490242 4.16676L3.9911 3.67525C4.17727 3.64913 4.33829 3.5361 4.42158 3.37303L5.98724 0.307984C6.19696 -0.102661 6.80307 -0.102661 7.01279 0.307984L8.57845 3.37303Z"
+                                  fill="#cbcbcb"/>
+                        </svg>
+                    </div>
+                    <div class="time">21:45</div>
+                    <div class="status blue">Перерыв</div>
+                    <div class="commands colors">
+                        Динамо Др<span>0 : 3</span>Гройтер Фюрт
+                    </div>
+                    <div class="live">
+                        <span><img src="img/Play.svg" alt="">Трансляция</span>
+                    </div>
+                    <div class="prognoz">2</div>
+                    <div class="bookmaker xbet">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#cbcbcb"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap.png" alt=""></div>
+
+                    </div>
+                    <div class="bookmaker winline red">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap-1.png" alt=""></div>
+                    </div>
+                    <div class="bookmaker marafon">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap-2.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="match__head">
+                    <div class="match__flag"><img src="img/germ.png" alt=""></div>
+                    <div class="match__name active">Кубок Германии. 1/2 финала
+                        <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.70504 11.8461L5.47035 9.51837C5.18739 9.31499 4.81261 9.31499 4.52965 9.51837L1.29496 11.8461C0.748461 12.239 0 11.8343 0 11.1454V0.852916C0 0.382268 0.36937 0 0.824063 0H9.17594C9.63063 0 10 0.382268 10 0.852916V11.1454C10 11.8343 9.25154 12.239 8.70504 11.8461Z"
+                                  fill="#DE0505"/>
+                        </svg>
+
+                    </div>
+                    <div class="match__prognosis">Прогнозы</div>
+                    <div class="match__th1">1</div>
+                    <div class="match__th1">X</div>
+                    <div class="match__th1">2</div>
+                </div>
+                <div class="match__info">
+                    <div class="star blue">
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.57845 3.37303C8.66174 3.5361 8.82266 3.64913 9.00892 3.67525L12.5098 4.16676C12.9788 4.23264 13.1661 4.78955 12.8267 5.10915L10.2935 7.49504C10.1587 7.6219 10.0972 7.80485 10.129 7.98405L10.7271 11.3529C10.8072 11.8042 10.3169 12.1484 9.89731 11.9353L6.76609 10.3448C6.59951 10.2602 6.40052 10.2602 6.23394 10.3448L3.10272 11.9353C2.68318 12.1484 2.19286 11.8042 2.27298 11.3529L2.87103 7.98405C2.90284 7.80485 2.84131 7.6219 2.70653 7.49504L0.173273 5.10915C-0.166058 4.78955 0.0212003 4.23264 0.490242 4.16676L3.9911 3.67525C4.17727 3.64913 4.33829 3.5361 4.42158 3.37303L5.98724 0.307984C6.19696 -0.102661 6.80307 -0.102661 7.01279 0.307984L8.57845 3.37303Z"
+                                  fill="#cbcbcb"/>
+                        </svg>
+                    </div>
+                    <div class="time">21:45</div>
+                    <div class="status red">Окончен</div>
+                    <div class="commands colors">
+                        Динамо Др<span>0 : 3</span>Гройтер Фюрт
+                    </div>
+                    <div class="live">
+                        <span><img src="img/Play.svg" alt="">Трансляция</span>
+                    </div>
+                    <div class="prognoz">2</div>
+                    <div class="bookmaker xbet">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#cbcbcb"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap.png" alt=""></div>
+
+                    </div>
+                    <div class="bookmaker winline red">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap-1.png" alt=""></div>
+                    </div>
+                    <div class="bookmaker marafon">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.97672 1.63865L5.11293 0.502441L6.24913 1.63865L10.2259 5.61537L9.08965 6.75157L5.11293 2.77485L1.13621 6.75157L6.66259e-07 5.61537L3.97672 1.63865Z"
+                                  fill="#3FC572"/>
+                        </svg>
+                        1.45
+                        <div class="logo"><img src="img/Bitmap-2.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="aside">
+            <div>
+                <img class="banner" src="img/sidebar.png" alt="">
+            </div>
+            <div class="popular">
+                <h2 class="popular__title">Популярные
+                    <br>букмекеры</h2>
+                <ul class="popular__list">
+                    <li class="popular__item">
+                        <img src="img/bookmakers1.png" alt="">
+                        <span>5/5</span>
+                        <button class="btn">На сайт</button>
+                    </li>
+                    <li class="popular__item">
+                        <img src="img/bookmakers2.png" alt="">
+                        <span>5/5</span>
+                        <button class="btn">На сайт</button>
+                    </li>
+                    <li class="popular__item">
+                        <img src="img/bookmakers3.png" alt="">
+                        <span>5/5</span>
+                        <button class="btn">На сайт</button>
+                    </li>
+                    <li class="popular__item">
+                        <img src="img/bookmakers4.png" alt="">
+                        <span>5/5</span>
+                        <button class="btn">На сайт</button>
+                    </li>
+                    <li class="popular__item">
+                        <img src="img/bookmakers5.png" alt="">
+                        <span>5/5</span>
+                        <button class="btn">На сайт</button>
+                    </li>
+                    <li class="popular__item">
+                        <img src="img/bookmakers6.png" alt="">
+                        <span>5/5</span>
+                        <button class="btn">На сайт</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="iron">
+                <h2 class="iron__title">Железные прогнозы</h2>
+                <ul class="iron__list">
+                    <li class="iron__item">
+                        <span>MIBR — Furia eSports</span>
+                        <div class="iron__coefficient">3.38</div>
+                    </li>
+                    <li class="iron__item">
+                        <span>«Квидинг» — «Оддевольд»</span>
+                        <div class="iron__coefficient">3.38</div>
+                    </li>
+                    <li class="iron__item">
+                        <span>Марк Богданов —
+Даниил Ким
+</span>
+                        <div class="iron__coefficient">3.38</div>
+                    </li>
+                    <li class="iron__item">
+                        <span>Рух Брест — Энергетик</span>
+                        <div class="iron__coefficient">3.38</div>
+                    </li>
+                    <li class="iron__item">
+                        <span>SK Telecom N1 — DragonX</span>
+                        <div class="iron__coefficient">3.38</div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</main>
+<script src="js/jquery.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
