@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?nia5d9');
+  src:  url('fonts/icomoon.eot?nia5d9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?nia5d9') format('truetype'),
+    url('fonts/icomoon.woff?nia5d9') format('woff'),
+    url('fonts/icomoon.svg?nia5d9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-book:before {
+  content: "\e900";
+}
+.icon-check:before {
+  content: "\e901";
+}
+.icon-cross:before {
+  content: "\e902";
+}
+.icon-dumbbell:before {
+  content: "\e903";
+}
+.icon-facebook:before {
+  content: "\e904";
+}
+.icon-Frame:before {
+  content: "\e905";
+}
+.icon-instagram:before {
+  content: "\e906";
+}
+.icon-left:before {
+  content: "\e907";
+}
+.icon-phone-call:before {
+  content: "\e908";
+}
+.icon-plus:before {
+  content: "\e909";
+}
+.icon-right:before {
+  content: "\e90a";
+}
+.icon-rocking-horse:before {
+  content: "\e90b";
+}
+.icon-shopping-cart:before {
+  content: "\e90c";
+}
+.icon-telegram:before {
+  content: "\e90d";
+}
+.icon-vk:before {
+  content: "\e90e";
+}
