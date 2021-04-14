@@ -7,6 +7,15 @@ $(document).ready(function () {
         $('.preloader').fadeOut('slow')
     }
 
+    $('.menu-btn').click(function () {
+        $(this).toggleClass('open')
+        if ($(this).hasClass('open')) {
+            $('.header-menu').slideDown()
+        } else {
+            $('.header-menu').slideUp()
+
+        }
+    })
 
     $('.about-wrapper').slick({
         slidesToShow: 1,
@@ -29,7 +38,7 @@ function contentEffect() {
     if ($('.effecttext').length) {
         $('.effecttext').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated fadeInUp',
-            offset: 200
+            offset: 50
         });
     }
     if ($('.effectfadetop').length) {
@@ -42,27 +51,27 @@ function contentEffect() {
     if ($('.effecttextfast').length) {
         $('.effecttextfast').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated-04s fadeInUp',
-            offset: 200
+            offset: 50
         });
     }
 
     if ($('.effectfade').length) {
         $('.effectfade').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated fadeInEffect',
-            offset: 200
+            offset: 50
         });
     }
 
     if ($('.effectfadeleft').length) {
         $('.effectfadeleft').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated fadeInLeft',
-            offset: 200
+            offset: 50
         });
     }
     if ($('.effectfaderight').length) {
         $('.effectfaderight').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated animate__fadeInRightBig',
-            offset: 200
+            offset: 50
         });
     }
 
@@ -75,14 +84,14 @@ function contentEffect() {
     if ($('.iphonex').length) {
         $('.iphonex').addClass('active').viewportChecker({
             classToAdd: 'visible animated',
-            offset: 400
+            offset: 100
         });
     }
 
     if ($('#index_clients').length) {
         $('#index_clients').viewportChecker({
             classToAdd: 'show',
-            offset: 400,
+            offset: 100,
             callbackFunction: function (elem, action) {
 
             }
@@ -92,7 +101,7 @@ function contentEffect() {
     if ($('#index_clients').length) {
         $('#index_clients').viewportChecker({
             classToAdd: 'show',
-            offset: 400,
+            offset: 100,
             callbackFunction: function (elem, action) {
 
             }

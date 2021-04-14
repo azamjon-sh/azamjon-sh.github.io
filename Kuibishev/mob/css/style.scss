@@ -17,7 +17,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 40px;
+  height: 30px;
 
   &.start {
     &:before {
@@ -47,7 +47,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   position: relative;
-  min-width: 1000px;
+  max-width: 1000px;
 }
 
 body.preloaded {
@@ -57,22 +57,22 @@ body.preloaded {
 h1 {
   font-family: 'Arsenal';
   font-weight: normal;
-  font-size: 64px;
-  line-height: 130%;
+  font-size: 38px;
+  line-height: 48px;
   color: #FFFFFF;
 }
 
 h2 {
   font-family: 'Arsenal';
   font-weight: normal;
-  font-size: 46px;
-  line-height: 54px;
+  font-size: 28px;
+  line-height: 36px;
   color: #303030;
 }
 
 .content {
-  max-width: 1480px;
-  padding: 0 20px;
+  max-width: 1000px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -81,18 +81,74 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 0;
   z-index: 1;
 }
 
-.header-menu {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
+.menu-btn {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  z-index: 10;
+  margin-left: -15px;
+
+  span {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #FFFFFF;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    transition: all .3s;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      top: -6px;
+      left: 0;
+      background-color: #FFFFFF;
+      transition: all .3s;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      background-color: #FFFFFF;
+      transition: all .3s;
+    }
+  }
+
+  &.open {
+    span {
+      background-color: #303030;
+      width: 0;
+
+      &:before {
+        background-color: #303030;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:after {
+        background-color: #303030;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
 }
+
 
 .header-wrap {
   display: flex;
@@ -103,93 +159,103 @@ h2 {
 .header-item {
   flex: 0 0 auto;
   max-width: 100%;
-}
 
-.header-phone {
-  padding-left: 32px;
-  position: relative;
-  display: block;
+  &.header-logo {
+    height: 21px;
 
-  a {
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: right;
-    color: #FFFFFF;
-    text-decoration: none;
-
-    &:before {
-      content: '';
+    img {
       height: 100%;
-      width: 1px;
-      background-color: #FFFFFF;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      opacity: .2;
     }
   }
 }
 
+.header-phone {
+  position: relative;
+  display: block;
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #F6B835;
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.header-menu {
+  display: none;
+  font-weight: 600;
+  margin-right: 10px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+  padding: 84px 0 20px;
+}
+
 .header-menu-item {
   font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
-  margin: 0 16px;
+  display: block;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000;
   text-decoration: none;
   position: relative;
-
-  &.header-menu-flat:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: #F6B835;
-    bottom: -2px;
-    transition: width .3s;
-  }
+  padding: 8px 20px;
+  border-bottom: 1px solid #E5E5E5;
 
   &:hover {
     transition: color .3s;
     color: #F6B835;
   }
 
+  &.header-menu-flat {
+    padding: 5px 40px;
+  }
+
   &.header-menu-disable {
     line-height: 24px;
     opacity: 0.5;
-    color: #FFFFFF;
+    color: #000;
   }
-}
-
-.menu-item-2lvl {
-  display: none;
 }
 
 .introduction {
   overflow: hidden;
-  background-image: url("../img/kuibishev-main.jpg");
+  background-image: url("../../img/kuibishev-main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  min-height: 550px;
-  max-height: 970px;
-  padding-top: 126px;
+  min-height: 340px;
+  max-height: 430px;
+  padding-top: 70px;
   position: relative;
 }
 
 .introduction-title {
-  margin-bottom: 34px;
+  margin-bottom: 15px;
 }
 
 .introduction-subtitle {
   font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 24px;
   color: #FFFFFF;
-  padding-left: 20px;
+  padding-left: 10px;
   border-left: 2px solid #fff;
   width: 380px;
 }
@@ -197,19 +263,19 @@ h2 {
 .introduction-bottom {
   bottom: 46px;
   width: 100%;
-  position: absolute;
 }
 
 .introduction-flats {
   display: flex;
-  margin: 0 -20px;
+  margin: 0 -15px;
+  flex-wrap: wrap;
   align-items: flex-end;
 }
 
 .introduction-flat-item {
-  flex: 0 0 25%;
-  max-width: 25%;
-  padding: 0 20px;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 15px 15px 0;
 
   &:nth-child(1) {
     .introduction-flat-wrap {
@@ -277,7 +343,7 @@ h2 {
 }
 
 .about {
-  padding: 60px 0 82px;
+  padding: 30px 0 44px;
   border-bottom: 1px solid #E7E7E7;
 
 }
@@ -285,12 +351,12 @@ h2 {
 .about-top {
   display: flex;
   width: 100%;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 }
 
 .about-title {
-  flex: 0 0 330px;
-  max-width: 330px;
+  flex: 0 0 180px;
+  max-width: 180px;
 }
 
 .about-text {
@@ -298,8 +364,8 @@ h2 {
   flex-basis: 0;
   max-width: 100%;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 24px;
   color: #303030;
 }
 
@@ -330,7 +396,16 @@ h2 {
 
 .about-slider {
   width: 100%;
-  height: 620px;
+  height: 430px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.about-wrapper {
+  width: 100%;
+  height: 430px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -351,17 +426,20 @@ h2 {
 
 .about-slide {
   width: 100%;
-  height: 100%;
+  height: 430px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   outline: none;
 
+  img {
+    max-height: 100%;
+  }
 }
 
 .about-button-prev, .about-button-next {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   margin-right: 22px;
   z-index: 1;
   position: relative;
@@ -388,25 +466,25 @@ h2 {
 
 
 .advantage {
-  padding: 60px 0 100px;
+  padding: 30px 0 30px;
   border-bottom: 1px solid #E7E7E7;
 }
 
 .advantage-title {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .advantage-list {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 0 -16px;
+  margin: 0 -7.5px;
 }
 
 .advantage-item {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
-  padding: 16px;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 7.5px;
 
   &:nth-child(1n) {
     .advantage-name {
@@ -434,7 +512,7 @@ h2 {
 
   &:hover {
     .advantage-img {
-      background-size: auto 120%;
+      background-size: 120% auto;
     }
 
     .advantage-name {
@@ -444,8 +522,8 @@ h2 {
 }
 
 .advantage-img {
-  height: 384px;
-  background-size: auto 100%;
+  height: 280px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -461,8 +539,8 @@ h2 {
   font-family: 'Arsenal';
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 32px;
   color: #FFFFFF;
   width: auto;
   transition: bottom .3s;
@@ -470,21 +548,45 @@ h2 {
 
 
 .location {
-  padding-top: 52px;
+  padding-top: 30px;
+  position: relative;
 }
 
 .location-title {
-  margin-bottom: 52px;
+  margin-bottom: 30px;
 }
 
 .location-map {
   position: relative;
-  height: 640px;
+  height: 420px;
   width: 100%;
 }
 
+.filter-btn, .use-btn {
+  background: #FF5C30;
+  border-radius: 22px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding: 11px;
+  text-align: center;
+  width: 180px;
+  outline: none;
+  border: none;
+}
+
+.filter-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
 .location-bottom {
-  display: flex;
+  display: none;
+  position: fixed;
+  flex-direction: column;
   align-items: center;
   padding: 24px 0 40px;
   justify-content: space-between;
@@ -647,26 +749,19 @@ h2 {
 
 .footer {
   background: #F6F6F6;
-  padding: 72px 0 0;
-}
-
-.footer-top-wrap {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.footer-logo {
-  height: 31px;
-  margin-bottom: 47px;
-
-  img {
-    height: 100%;
-  }
+  padding: 22px 0 0;
 }
 
 .footer-messengers {
   display: flex;
+  justify-content: center;
+  padding: 5px 0 25px;
+}
+
+.footer-top-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 
 .footer-messenger-item {
@@ -708,7 +803,7 @@ h2 {
   line-height: 28px;
   text-decoration: none;
   color: #303030;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   transition: color .3s;
 
   &:hover {
@@ -732,7 +827,7 @@ h2 {
 }
 
 .footer-contacts-item {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
 
 .footer-bottom {
@@ -778,130 +873,61 @@ h2 {
   opacity: 1;
 }
 
-@media(max-width: 1440px) {
-  .location-map {
-    height: 443px;
-  }
-}
-
-@media(max-width: 1280px) {
+@media (max-width: 768px) {
   .introduction {
-    max-height: 640px;
-    padding-top: 100px;
-  }
-  .content {
-    max-width: 1100px;
-  }
-  h1 {
-    font-size: 46px;
-    line-height: 54px;
-  }
-  .introduction-title {
-    margin-bottom: 15px;
-  }
-  .introduction-subtitle {
-    font-size: 14px;
-    line-height: 24px;
-  }
-  .introduction-flat-wrap {
-    padding: 12px 10px 12px 20px;
-
-    &:hover {
-      padding: 18px 10px 18px 20px;
-    }
-  }
-  .introduction-flat-item {
-    padding: 0 12px;
-  }
-  .introduction-flats {
-    margin: 0 -12px;
-  }
-  .header-logo {
-    height: 20px;
-    display: inline-block;
-
-    img {
-      height: 100%;
-    }
-  }
-  .header-menu {
-    margin-right: 10px;
-  }
-  .header-menu-item {
-    margin: 0 10px;
-  }
-  .header-phone {
-    line-height: 19px;
-    padding-left: 20px;
-  }
-  h2 {
-    font-size: 38px;
-    line-height: 48px;
-  }
-  .about-title {
-    flex: 0 0 255px;
-    max-width: 255px;
-  }
-  .about-text {
-    font-size: 14px;
-    line-height: 24px;
-  }
-  .about-top {
-    margin-bottom: 33px;
+    height: 495px;
   }
   .about {
-    padding: 50px 0;
+    padding: 30px 0 100px;
   }
-  .advantage-img {
-    padding: 16px;
+  .about-slider, .about-wrapper, .about-slide {
+    height: 350px;
   }
-  .advantage-name {
-    font-size: 22px;
-    line-height: 30px;
+  .about-slider-arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    right: unset;
+    bottom: -56px;
+    z-index: 1;
+    transform: translateX(-50%);
   }
-  .advantage-img {
-    height: 293px;
-  }
-  .about-button-prev, .about-button-next {
-    width: 45px;
-    height: 45px;
-  }
-  .advantage {
-    padding: 32px 0;
-  }
-  .advantage-title {
-    margin-bottom: 32px;
-  }
-  .footer-contacts-item {
-    margin-bottom: 20px;
-  }
-  .footer-menu-item {
-    margin-bottom: 18px;
-  }
-  .location-bus {
-    margin-right: 34px;
-  }
-  .location-minibus {
-    margin-right: 0;
-  }
-  .introduction-flat-wrap .icon-right{
-    right: 10px;
+  .footer-top-wrap{
+    padding: 0;
   }
 }
-@media(max-width: 1100px) {
-  .header-logo{
-    height: 18px;
+
+@media (max-width: 650px) {
+  .introduction-flat-item{
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  .header-menu-item{
-    margin: 0 7px;
+  .advantage-item {
+    flex: 0 0 100%;
+    max-width: 400px;
+    padding: 7.5px;
   }
-  .header-menu-item{
-    font-size: 13px;
+  .advantage-list{
+    justify-content: center;
   }
-  .header-phone a{
-    font-size: 19px;
+  .advantage-img{
+    height: 264px;
   }
-  .flats-type{
-    font-weight: 500;
+  .location-map{
+    height: 420px;
+  }
+  .footer-top-wrap{
+    display: block;
+  }
+  .about-top{
+    display: block;
+  }
+  .about-title{
+    margin-bottom: 16px;
+  }
+  .about-slider, .about-wrapper, .about-slide {
+    height: 256px;
   }
 }
