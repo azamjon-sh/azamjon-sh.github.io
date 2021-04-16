@@ -7,7 +7,6 @@ $(document).ready(function () {
         $('.preloader').fadeOut('slow')
     }
 
-
     $('.about-wrapper').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -17,12 +16,144 @@ $(document).ready(function () {
     })
 
     contentEffect();
-    $('.location-right-item').click(function () {
-        $(this).toggleClass('active')
-    })
-    $('.location-left').click(function () {
-        $(this).toggleClass('active')
-    })
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [53.286570, 50.222692],
+            zoom: 15,
+            controls: [
+                'zoomControl', // Ползунок масштаба
+            ]
+        });
+
+        var mySchools = new ymaps.Placemark([53.265751, 50.225417], {
+            hintContent: 'Школа № 100',
+            balloonContent: 'Школа № 100',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/school.svg',
+            iconImageSize: [32, 32],
+            iconImageOffset: [-16, -16],
+        });
+        myMap.geoObjects.add(mySchools);
+
+        var shop = new ymaps.Placemark([53.288072, 50.222992], {
+            hintContent: 'Пятерочка',
+            balloonContent: 'Сеть магазинов Пятерочка',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/shops.svg',
+            iconImageSize: [32, 32],
+            iconImageOffset: [-16, -16],
+        });
+        myMap.geoObjects.add(shop);
+
+        var medecine = new ymaps.Placemark([53.265799, 50.227008], {
+            hintContent: 'Магнит',
+            balloonContent: 'Сеть магазинов Магнит',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/medecine.svg',
+            iconImageSize: [32, 32],
+            iconImageOffset: [-16, -16],
+        });
+        myMap.geoObjects.add(medecine);
+        var kinder = new ymaps.Placemark([53.270288, 50.217965], {
+            hintContent: 'Кораблик детства',
+            balloonContent: 'Кораблик детства',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/kinder.svg',
+            iconImageSize: [32, 32],
+            iconImageOffset: [-16, -16],
+        });
+        myMap.geoObjects.add(kinder);
+        var traning = new ymaps.Placemark([53.274692, 50.226808], {
+            hintContent: 'Клуб спортивных единоборств и фитнеса Прайд',
+            balloonContent: 'Клуб спортивных единоборств и фитнеса Прайд',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/traning.svg',
+            iconImageSize: [32, 32],
+            iconImageOffset: [-16, -16],
+        });
+        myMap.geoObjects.add(traning);
+        var stops = new ymaps.Placemark([53.290832, 50.224082], {
+            hintContent: 'Клуб спортивных единоборств и фитнеса Прайд',
+            balloonContent: 'Клуб спортивных единоборств и фитнеса Прайд',
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/bus.svg',
+            iconImageSize: [32, 32],
+            iconImageOffset: [-16, -16],
+        });
+        myMap.geoObjects.add(stops);
+        var myPlacemark = new ymaps.Placemark([53.286570, 50.222692], {
+            hintContent: 'Содержимое всплывающей подсказки',
+            balloonContent: 'Содержимое балуна'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/placemark.svg',
+            iconImageSize: [32, 32],
+            iconImageOffset: [-16, -16],
+        });
+
+        // После того как метка была создана, добавляем её на карту.
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom')
+        $('.location-book').click(function () {
+            $(this).toggleClass('active')
+            if ($(this).hasClass('active')) {
+                mySchools.options.set("visible", false)
+            } else {
+                mySchools.options.set("visible", true)
+            }
+        })
+        $('.location-rocking-horse').click(function () {
+            $(this).toggleClass('active')
+            if ($(this).hasClass('active')) {
+                kinder.options.set("visible", false)
+            } else {
+                kinder.options.set("visible", true)
+            }
+        })
+        $('.location-shopping-cart').click(function () {
+            $(this).toggleClass('active')
+            if ($(this).hasClass('active')) {
+                shop.options.set("visible", false)
+            } else {
+                shop.options.set("visible", true)
+            }
+        })
+        $('.location-dumbbell').click(function () {
+            $(this).toggleClass('active')
+            if ($(this).hasClass('active')) {
+                traning.options.set("visible", false)
+            } else {
+                traning.options.set("visible", true)
+            }
+        })
+        $('.location-cross').click(function () {
+            $(this).toggleClass('active')
+            if ($(this).hasClass('active')) {
+                medecine.options.set("visible", false)
+            } else {
+                medecine.options.set("visible", true)
+            }
+        })
+        $('.location-left').click(function () {
+            $(this).toggleClass('active')
+            if ($(this).hasClass('active')) {
+                stops.options.set("visible", false)
+            } else {
+                stops.options.set("visible", true)
+            }
+        })
+
+    }
+
+
 })
 
 function contentEffect() {
