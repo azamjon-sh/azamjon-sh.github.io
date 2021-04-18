@@ -7,14 +7,13 @@ $(document).ready(function () {
         $('.preloader').fadeOut('slow')
     }
 
-    $('.menu-btn').click(function () {
-        $(this).toggleClass('open')
-        if ($(this).hasClass('open')) {
-            $('.header-menu').slideDown()
-        } else {
-            $('.header-menu').slideUp()
-
-        }
+    $('.menu-open').click(function () {
+        $('.header-mob-menu').slideDown()
+        $('body').addClass('preloading')
+    })
+    $('.menu-close').click(function () {
+        $('.header-mob-menu').slideUp()
+        $('body').removeClass('preloading')
     })
     $('.filter-btn').click(function () {
         $('.location-bottom').fadeIn()
@@ -32,7 +31,7 @@ $(document).ready(function () {
         nextArrow: $('.about-button-next'),
     })
     contentEffect();
-   
+
     ymaps.ready(init);
 
     function init() {

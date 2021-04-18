@@ -49,7 +49,7 @@ body {
   max-width: 1000px;
 }
 
-body.preloaded {
+body.preloading {
   overflow: hidden;
 }
 
@@ -83,14 +83,13 @@ h2 {
   z-index: 1;
 }
 
-.menu-btn {
+.menu-open {
   width: 64px;
   height: 64px;
   position: relative;
-  z-index: 10;
   margin-left: -15px;
 }
-.menu-btn span {
+.menu-open span {
   display: block;
   position: relative;
   width: 30px;
@@ -103,7 +102,7 @@ h2 {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-.menu-btn span:before {
+.menu-open span:before {
   content: '';
   display: block;
   width: 30px;
@@ -115,7 +114,7 @@ h2 {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-.menu-btn span:after {
+.menu-open span:after {
   content: '';
   display: block;
   width: 30px;
@@ -127,23 +126,61 @@ h2 {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-.menu-btn.open span {
-  background-color: #303030;
-  width: 0;
+
+.menu-close {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  margin-left: -15px;
 }
-.menu-btn.open span:before {
+.menu-close span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background-color: #FFFFFF;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.menu-close span:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   background-color: #303030;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
 }
-.menu-btn.open span:after {
+.menu-close span:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  bottom: -6px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   background-color: #303030;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.header-mob-item.header-logo {
+  height: 20px;
+}
+.header-mob-item.header-logo img {
+  max-height: 100%;
 }
 
 .header-wrap {
@@ -193,10 +230,9 @@ h2 {
           transform: translate(-50%, -50%);
 }
 
-.header-menu {
+.header-mob-menu {
   display: none;
   font-weight: 600;
-  margin-right: 10px;
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -204,32 +240,96 @@ h2 {
   top: 0;
   overflow-y: auto;
   background-color: #FFFFFF;
-  padding: 84px 0 20px;
+  padding: 0 15px;
+}
+
+.mob-menu-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-menu {
+  padding-bottom: 8px;
+  border-top: 1px solid #F3F3F3;
+  border-bottom: 1px solid #F3F3F3;
 }
 
 .header-menu-item {
   font-weight: 600;
   display: block;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 22px;
   color: #000;
   text-decoration: none;
   position: relative;
-  padding: 8px 20px;
-  border-bottom: 1px solid #E5E5E5;
+  padding: 11px 0;
 }
 .header-menu-item:hover {
   -webkit-transition: color .3s;
   transition: color .3s;
   color: #F6B835;
 }
-.header-menu-item.header-menu-flat {
-  padding: 5px 40px;
-}
 .header-menu-item.header-menu-disable {
   line-height: 24px;
   opacity: 0.5;
   color: #000;
+}
+
+.mob-menu-flat {
+  font-size: 14px;
+  line-height: 24px;
+  color: #303030;
+  opacity: 0.5;
+  margin: 16px 0 20px;
+}
+
+.mob-menu-phone {
+  font-size: 20px;
+  line-height: 24px;
+  color: #303030;
+  margin: 25px 0;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.header-menu-flat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 -8px 40px;
+}
+
+.mob-menu-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 165px;
+  padding: 0 8px;
+  text-align: center;
+  text-decoration: none;
+}
+.mob-menu-item img {
+  max-width: 100%;
+}
+.mob-menu-item span {
+  margin-top: 12px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: #303030;
+  border-bottom: 2px solid #F6B835;
 }
 
 .introduction {
@@ -755,19 +855,17 @@ h2 {
   background-color: #3ABDEB;
 }
 
-.footer {
-  background: #F6F6F6;
-  padding: 22px 0 0;
+.location-description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #303030;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
-.footer-messengers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 5px 0 25px;
+.footer-top {
+  background-color: rgba(246, 184, 53, 0.1);
 }
 
 .footer-top-wrap {
@@ -777,55 +875,49 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 36px 0;
 }
 
-.footer-messenger-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 54px;
-          flex: 0 0 54px;
-  max-width: 54px;
-  position: relative;
-  height: 54px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  margin-right: 14px;
-}
-.footer-messenger-item a {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
+.footer-phone-icon {
   position: relative;
   text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  background-color: #F6B835;
+  margin-right: 16px;
+}
+
+.footer-phone {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-phone span {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
   color: #303030;
-  -webkit-transition: color .3s;
-  transition: color .3s;
 }
-.footer-messenger-item a:hover {
-  color: #FF5C30;
-}
-.footer-messenger-item span {
-  font-size: 21px;
+.footer-phone .icon-phone-call {
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: normal;
+  color: #FFFFFF;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.footer-menu-item {
-  display: block;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  text-decoration: none;
-  color: #303030;
-  margin-bottom: 20px;
-  -webkit-transition: color .3s;
-  transition: color .3s;
-}
-.footer-menu-item:hover {
-  color: #FF5C30;
+  transform: translate(-50%, -50%);
 }
 
 .footer-contacts-name {
@@ -836,23 +928,17 @@ h2 {
 }
 
 .footer-contacts-link {
+  display: inline-block;
   font-weight: normal;
   font-size: 16px;
   line-height: 175%;
   color: #303030;
   text-decoration: none;
-}
-
-.footer-contacts-item {
-  margin-bottom: 20px;
-}
-
-.footer-bottom {
-  border-top: 1px solid #E5E5E5;
+  border-bottom: 2px solid #F6B835;
 }
 
 .footer-bottom-wrap {
-  padding: 15px;
+  padding: 15px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -920,10 +1006,6 @@ h2 {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-
-  .footer-top-wrap {
-    padding: 0;
-  }
 }
 @media (max-width: 650px) {
   .introduction-flat-item {
@@ -931,6 +1013,10 @@ h2 {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .introduction {
+    background-position: right center;
   }
 
   .advantage-item {
@@ -955,8 +1041,20 @@ h2 {
     height: 420px;
   }
 
+  .footer-contacts-link {
+    display: inline;
+  }
+
   .footer-top-wrap {
     display: block;
+    text-align: center;
+  }
+
+  .footer-phone {
+    margin-bottom: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .about-top {
@@ -974,5 +1072,12 @@ h2 {
 @media (max-width: 360px) {
   .location-routs .location-circle {
     display: none;
+  }
+
+  .footer-bottom-left {
+    font-size: 14px;
+  }
+  .footer-bottom-left a {
+    font-style: 12px;
   }
 }
