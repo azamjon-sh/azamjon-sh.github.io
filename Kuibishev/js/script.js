@@ -14,8 +14,27 @@ $(document).ready(function () {
         prevArrow: $('.about-button-prev'),
         nextArrow: $('.about-button-next'),
     })
-
-    contentEffect();
+    $('.menu-open').click(function () {
+        $('.header-mob-menu').slideDown()
+        $('body').addClass('preloading')
+    })
+    $('.menu-close').click(function () {
+        $('.header-mob-menu').slideUp()
+        $('body').removeClass('preloading')
+    })
+    $('.filter-btn').click(function () {
+        $('.location-fon').fadeIn()
+        $('body').addClass('preloading')
+    })
+    $('.use-btn').click(function () {
+        $('.location-fon').fadeOut()
+        $('body').removeClass('preloading')
+    })
+    if (window.screen.width > 1000) {
+        contentEffect(1);
+    } else {
+        contentEffect(10);
+    }
     ymaps.ready(init);
 
     function init() {
@@ -150,17 +169,25 @@ $(document).ready(function () {
                 stops.options.set("visible", true)
             }
         })
+        $('.location-routs').click(function () {
+            $(this).toggleClass('checked')
+            if ($(this).hasClass('checked')) {
+                stops.options.set("visible", true)
+            } else {
+                stops.options.set("visible", false)
+            }
+        })
 
     }
 
 
 })
 
-function contentEffect() {
+function contentEffect(val) {
     if ($('.effecttext').length) {
         $('.effecttext').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated fadeInUp',
-            offset: 200
+            offset: 200 / val
         });
     }
     if ($('.effectfadetop').length) {
@@ -173,47 +200,47 @@ function contentEffect() {
     if ($('.effecttextfast').length) {
         $('.effecttextfast').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated-04s fadeInUp',
-            offset: 200
+            offset: 200 / val
         });
     }
 
     if ($('.effectfade').length) {
         $('.effectfade').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated fadeInEffect',
-            offset: 200
+            offset: 200 / val
         });
     }
 
     if ($('.effectfadeleft').length) {
         $('.effectfadeleft').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated fadeInLeft',
-            offset: 200
+            offset: 200 / val
         });
     }
     if ($('.effectfaderight').length) {
         $('.effectfaderight').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated animate__fadeInRightBig',
-            offset: 200
+            offset: 200 / val
         });
     }
 
     if ($('.effecttextdown').length) {
         $('.effecttextdown').addClass('hidden').viewportChecker({
             classToAdd: 'visible animated animate__fadeInDownBig',
-            offset: 0
+            offset: 0 / val
         });
     }
     if ($('.iphonex').length) {
         $('.iphonex').addClass('active').viewportChecker({
             classToAdd: 'visible animated',
-            offset: 400
+            offset: 400 / val
         });
     }
 
     if ($('#index_clients').length) {
         $('#index_clients').viewportChecker({
             classToAdd: 'show',
-            offset: 400,
+            offset: 400 / val,
             callbackFunction: function (elem, action) {
 
             }
@@ -223,7 +250,7 @@ function contentEffect() {
     if ($('#index_clients').length) {
         $('#index_clients').viewportChecker({
             classToAdd: 'show',
-            offset: 400,
+            offset: 400 / val,
             callbackFunction: function (elem, action) {
 
             }
