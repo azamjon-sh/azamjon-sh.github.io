@@ -67,7 +67,7 @@
                 <img src="img/logo-black.svg" alt="">
             </a>
 
-            <div class="header-mob-item header-phone">
+            <div class="header-mob-item header-mob-phone">
                 <a href="tel:+78469799205"><span class="icon-phone-call"></span></a>
             </div>
         </div>
@@ -224,7 +224,7 @@
             </div>
         </div>
     </div>
-    <div class="location effecttext">
+    <div class="location effecttext" id="location">
         <div class="content">
             <h2 class="location-title">Расположение</h2>
         </div>
@@ -236,8 +236,8 @@
             <div class="location-fon">
                 <div class="location-bottom">
                     <div class="location-bottom-title">Фильтр</div>
-                    <div class="location-right">
-                        <div class="location-right-item location-book ">
+                    <div class="location-right" id="location-category">
+                        <div class="location-right-item location-book" data-category="1">
                             <div class="location-circle">
                                 <span class="icon-book"></span>
                             </div>
@@ -246,7 +246,7 @@
                                 <span class="icon-check"></span>
                             </div>
                         </div>
-                        <div class="location-right-item location-rocking-horse ">
+                        <div class="location-right-item location-rocking-horse" data-category="4">
                             <div class="location-circle ">
                                 <span class="icon-rocking-horse"></span>
                             </div>
@@ -255,7 +255,7 @@
                                 <span class="icon-check"></span>
                             </div>
                         </div>
-                        <div class="location-right-item location-shopping-cart ">
+                        <div class="location-right-item location-shopping-cart" data-category="2">
                             <div class="location-circle ">
                                 <span class="icon-shopping-cart"></span>
                             </div>
@@ -264,7 +264,7 @@
                                 <span class="icon-check"></span>
                             </div>
                         </div>
-                        <div class="location-right-item location-dumbbell ">
+                        <div class="location-right-item location-dumbbell" data-category="5">
                             <div class="location-circle ">
                                 <span class="icon-dumbbell"></span>
                             </div>
@@ -273,7 +273,7 @@
                                 <span class="icon-check"></span>
                             </div>
                         </div>
-                        <div class="location-right-item location-cross ">
+                        <div class="location-right-item location-cross" data-category="3">
                             <div class="location-circle ">
                                 <span class="icon-cross"></span>
                             </div>
@@ -282,7 +282,7 @@
                                 <span class="icon-check"></span>
                             </div>
                         </div>
-                        <div class="location-right-item location-routs ">
+                        <div class="location-right-item location-routs" data-category="6">
                             <div class="location-circle">
                                 <img src="img/bus.svg" alt="">
                             </div>
@@ -362,10 +362,96 @@
 
 
 <!-- Создаём карту -->
+<script>
+    var CATEGORY_OBJECTS = {
+        'c1': {
+            'id': '1',
+            'name': 'Школы',
+            'icon': 'icon-binoculars',
+            'balloon': 'img/school.svg'
+        },
+        'c2': {
+            'id': '2',
+            'name': 'Магнит',
+            'icon': 'icon-fork',
+            'balloon': 'img/shops.svg'
+        },
+        'c3': {
+            'id': '3',
+            'name': 'Медицина',
+            'icon': 'icon-cocktail',
+            'balloon': 'img/medecine.svg'
+        },
+        'c4': {
+            'id': '4',
+            'name': 'Детские сады',
+            'icon': 'icon-amusement',
+            'balloon': 'img/kinder.svg'
+        },
+        'c5': {
+            'id': '5',
+            'name': 'Спорт',
+            'icon': 'icon-amusement',
+            'balloon': 'img/traning.svg'
+        },
+        'c6': {
+            'id': '6',
+            'name': 'Маршруты',
+            'icon': 'icon-theater',
+            'balloon': 'img/bus.svg'
+        }
+    };
+    var OBJECTS = {
+        "partners": [{
+            "id": 10,
+            "name": "МБОУ школа № 100 г.о. Самара",
+            "address": "улица Тополей, 10",
+            "photo": "",
+            "categoryId": 1,
+            "coords": "53.265751, 50.225417",
+        }, {
+            "id": 11,
+            "name": "Пятёрочка",
+            "address": "Лесная линия, 46Б",
+            "photo": "",
+            "categoryId": 2,
+            "coords": "53.288072, 50.222992",
+        }, {
+            "id": 12,
+            "name": "Самарская городская поликлиника № 1",
+            "address": "ул. Тополей, 12",
+            "photo": "",
+            "categoryId": 3,
+            "coords": "53.264466, 50.227375",
+        }, {
+            "id": 13,
+            "name": "Кораблик детства",
+            "address": "улица Тополей, 10",
+            "photo": "",
+            "categoryId": 4,
+            "coords": "53.271087, 50.218219",
+        }, {
+            "id": 14,
+            "name": "Клуб спортивных единоборств и фитнеса Прайд",
+            "address": "Демократическая ул., 45А",
+            "photo": "",
+            "categoryId": 5,
+            "coords": "53.274061, 50.226674",
+        }, {
+            "id": 15,
+            "name": "Остановка Дачи",
+            "address": "",
+            "photo": "",
+            "categoryId": 6,
+            "coords": "53.291007, 50.223804",
+        }]
+    }
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.viewportchecker.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/map-objects.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

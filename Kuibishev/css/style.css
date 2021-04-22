@@ -488,6 +488,7 @@ h2 {
   position: relative;
   height: 640px;
   width: 100%;
+  overflow: hidden;
 }
 
 .location-bottom {
@@ -813,6 +814,10 @@ h2 {
 }
 
 .interlab-icon-small {
+  display: none;
+}
+
+.filter-btn {
   display: none;
 }
 
@@ -1466,6 +1471,7 @@ h2 {
     height: 430px;
     position: relative;
     margin-left: auto;
+    overflow: unset;
     margin-right: auto;
     z-index: 1;
   }
@@ -1495,6 +1501,7 @@ h2 {
   .about-slide {
     width: 100%;
     height: 430px;
+    overflow: hidden;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1618,6 +1625,7 @@ h2 {
   }
 
   .filter-btn, .use-btn {
+    display: block;
     background: #FF5C30;
     border-radius: 22px;
     font-weight: 600;
@@ -1697,7 +1705,7 @@ h2 {
   .location-fon {
     display: none;
     position: fixed;
-    overflow-y: auto;
+    overflow: hidden;
     height: 100vh;
     width: 100%;
     left: 0;
@@ -1706,9 +1714,10 @@ h2 {
   }
 
   .location-bottom {
-    position: relative;
+    position: absolute;
     left: 0;
     bottom: 0;
+    overflow-y: auto;
     display: block;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1719,8 +1728,8 @@ h2 {
             justify-content: space-between;
     width: 100%;
     background-color: #fff;
-    overflow-y: auto;
     border-radius: 10px 10px 0 0;
+    max-height: 100%;
   }
 
   .location-bottom-title {
@@ -1741,7 +1750,8 @@ h2 {
   }
 
   .location-checkbox {
-    background: #FF5C30;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
     border-radius: 4px;
     position: absolute;
     top: 50%;
@@ -1755,6 +1765,24 @@ h2 {
     height: 20px;
   }
   .location-checkbox span {
+    display: none;
+  }
+
+  .active .location-checkbox {
+    background: #FF5C30;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 20px;
+    right: 15px;
+    height: 20px;
+  }
+  .active .location-checkbox span {
     color: #FFFFFF !important;
     font-size: 12px;
     display: block;
@@ -1763,14 +1791,6 @@ h2 {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-  }
-
-  .active .location-checkbox {
-    background: #FFFFFF;
-    border: 1px solid #EBEBEB;
-  }
-  .active .location-checkbox span {
-    display: none;
   }
 
   .location-right-item {
