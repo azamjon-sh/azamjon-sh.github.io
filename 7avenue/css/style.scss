@@ -448,7 +448,7 @@ button {
   max-width: 786px;
 }
 
-.about-link {
+.more-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -462,19 +462,19 @@ button {
   z-index: 2;
 
   &:hover {
-    .about-btn:before {
+    .more-btn:before {
       width: 10px;
       transform: translate(3px, -50%);
     }
 
-    .about-btn:after {
+    .more-btn:after {
       transform: translate(-50%, -50%) rotate(-45deg);
 
     }
   }
 }
 
-.about-btn {
+.more-btn {
   width: 40px;
   height: 40px;
   border: 1px solid #D7B56D;
@@ -538,10 +538,10 @@ button {
   }
 }
 
-#main-slider.swiper-slider {
-  height: 737px;
+#main-slider.swiper-container {
   width: 100%;
   position: relative;
+  overflow: inherit;
 }
 
 #main-slider .swiper-slide {
@@ -549,7 +549,52 @@ button {
   background-size: auto 100%;
   background-position: top left;
   background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
 }
+
+.rooms_image {
+  width: 67.7%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.room-right {
+  background-color: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+  width: 31%;
+  max-width: 31%;
+  height: auto;
+  padding: 80px;
+  left: 67.7%;
+  transform: translate(-48px, 46px);
+  z-index: 1;
+  min-height: 85%;
+}
+
+.room-name {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #D7B56D;
+}
+
+.room-parameter {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 170%;
+  margin-top: 20px;
+}
+
+.room-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 170%;
+  color: #7A7A7A;
+  margin-top: 20px;
+}
+
 
 .slider-controls {
   position: absolute;
@@ -559,6 +604,7 @@ button {
   display: flex;
   z-index: 3;
 }
+
 
 .slider-pagination {
   font-family: 'Kudryashev Headline';
@@ -577,12 +623,14 @@ button {
   top: 10px;
   cursor: pointer;
   transition: all .2s;
+
   &:hover {
     &.swiper-button-disabled {
       path {
         fill: #BCBCBC;
       }
     }
+
     path {
       fill: #D7B56D;
     }
@@ -594,6 +642,291 @@ button {
     fill: #BCBCBC;
   }
 }
-.rooms{
-  padding: 85px 0 80px;
+
+.rooms {
+  padding: 85px 0 126px;
+  background-color: #EFEFEF;
+}
+
+.rooms-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.rooms-text {
+  flex: 0 0 50%;
+  max-width: 50%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  color: #7A7A7A;
+}
+
+.restaurant {
+  height: calc(100vh - 80px);
+  padding: 71px 0 46px;
+  min-height: 650px;
+
+  .content {
+    height: 100%;
+  }
+}
+
+.restaurant-wrap {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurant-text {
+  width: 715px;
+  text-align: center;
+}
+
+.restaurant-title {
+  color: #FFFFFF;
+  margin: 0 0 20px;
+}
+
+.restaurant-subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 170%;
+  margin-bottom: 210px;
+  color: #FFFFFF;
+}
+
+.restaurant-link {
+  color: #FFFFFF;
+  justify-content: center;
+}
+
+.restaurant-btn {
+  border-color: #FFFFFF;
+
+  &:before {
+    background-color: #FFFFFF;
+  }
+
+  &:after {
+    border-color: #FFFFFF;
+  }
+}
+
+.entertainment {
+  padding: 40px 0 80px;
+}
+
+.entertainment-title {
+  margin: 0 0 67px;
+  text-align: center;
+}
+
+.entertainment-list {
+  padding: 0 85px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.entertainment-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 16px;
+  margin-bottom: 38px;
+}
+
+.entertainment-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 113.6%;
+  background: url(http://files.all-free-download.com//downloadfiles/wallpapers/1280_720/heihachi_mishima_tekken_7_4k_17496.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.entertainment-name {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 150%;
+  color: #000000;
+  margin-top: 18px;
+}
+
+.discount {
+  background-color: #EFEFEF;
+  padding: 70px 0 90px;
+}
+
+.discount-title {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.discount-slider {
+  position: relative;
+  padding: 0 185px;
+
+  .swiper-wrapper, .swiper-container {
+    position: static;
+    cursor: pointer;
+  }
+}
+
+.discount-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 105.8%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.discount-name {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 150%;
+  color: #000000;
+  margin-top: 18px;
+}
+
+.discount-prev, .discount-next {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  transform: translateY(-50%);
+
+  &:hover {
+    path {
+      fill: #D7B56D;
+    }
+  }
+}
+
+.discount-next {
+  right: 0;
+}
+
+.discount-prev {
+  left: 0;
+}
+
+.maps {
+  width: 100%;
+  height: 588px;
+
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.footer-top {
+  padding: 60px 0;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.footer-logo {
+  margin: 0 auto 40px;
+  width: 148px;
+  height: auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.footer-phone {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.footer-bottom-wrap {
+  padding: 15px 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-address {
+  width: 100%;
+  display: block;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 170%;
+  text-align: center;
+  color: #000000;
+
+  svg {
+    position: relative;
+    top: 4px;
+    margin-right: 13px;
+  }
+}
+
+.footer-messenger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    background-color: #EFEFEF;
+    border-radius: 50%;
+    margin: 0 12px;
+    width: 56px;
+    position: relative;
+    height: 56px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: black;
+  }
+}
+
+.footer-bottom-left {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #303030;
+}
+
+.footer-bottom-left a {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #858585;
+}
+
+.interlab-icon-small {
+  display: none;
+}
+@media (max-width: 1680px) {
+  
 }
