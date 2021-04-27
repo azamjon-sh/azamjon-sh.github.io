@@ -15,14 +15,22 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/iconmoon/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/swiper.css">
-
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="no-scroll">
+
+<div class="preloader">
+    <div class="preloader-content">
+        <img class="preloader-first" src="img/preload-top.svg" alt="">
+        <img class="preloader-second" src="img/preload-botom.svg" alt="">
+    </div>
+</div>
 <div class="header-fullscreen">
     <div class="fullscreen-close"></div>
     <img class="fullscreen-logo" src="img/logo-brown.svg" alt="">
+    <img class="fullscreen-logo-mobile" src="img/logo-horisontal.svg" alt="">
     <div class="fullscreen-menu">
         <a href="#" class="fullscreen-item"><span>Об отеле</span></a>
         <a href="#" class="fullscreen-item"><span>Номера</span></a>
@@ -69,13 +77,13 @@
 </header>
 
 <main class="main">
-    <div class="introduction">
+    <div class="introduction scaled">
         <div class="content">
             <div class="introduction-header">
                 <div class="introduction-logo">
                     <img src="img/logo-white.svg " alt="">
                 </div>
-                <div class="introduction-right">
+                <div class="introduction-right effecttextdown delay-2s">
                     <div class="btn btn-phone">
                         <span class="icon-call"></span>
                         Контакты
@@ -92,29 +100,28 @@
                     </div>
                 </div>
             </div>
-            <div class="introduction-text">
-                <h1 class="introduction-title">
+            <div class="introduction-text ">
+                <h1 class="introduction-title effecttext delay-2s">
                     Отель премиум класса <br>
                     в центре Самары
                 </h1>
-                <button class="btn btn-play">
+                <button class="btn btn-play effecttext delay-2s">
                     <img src="img/play.svg" alt="">
                 </button>
             </div>
             <div class="introduction-booking">
-
             </div>
         </div>
     </div>
     <div class="about">
         <div class="content">
-            <div class="about-subtitle">
+            <div class="about-subtitle effectfade">
                 7 avenue hotel & spa
             </div>
-            <h3 class="about-title">
+            <h3 class="about-title effectfade">
                 Об отеле
             </h3>
-            <div class="about-description">
+            <div class="about-description effectfade">
                 <div class="about-text">
                     Первоклассный отель с премиальным сервисом обслуживания в центре города Самара. Стильный интерьер,
                     квалифицированный персонал и профессиональный подход делают гостиницу роскошным местом для уютного
@@ -128,10 +135,10 @@
             </div>
         </div>
         <div class="about-images">
-            <div class="img-left">
+            <div class="img-left effectfade">
                 <img src="img/about-left.jpg" alt="">
             </div>
-            <div class="img-right">
+            <div class="img-right effectfade delay-02s">
                 <img src="img/about-right.jpg" alt="">
 
             </div>
@@ -140,11 +147,11 @@
     <div class="rooms">
         <div class="content">
             <div class="rooms-description">
-                <h3 class="rooms-title">Номера</h3>
-                <p class="rooms-text">При планировании посещения города Самары по работе или для отдыха, стоит заранее
+                <h3 class="rooms-title effectfaderight">Номера</h3>
+                <p class="rooms-text effectfaderight">При планировании посещения города Самары по работе или для отдыха, стоит заранее
                     выбрать подходящий номер в отеле.</p>
             </div>
-            <div class="swiper-container" id="main-slider">
+            <div class="swiper-container effectfade" id="main-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="rooms_image" style="background-image: url('img/slider-1.jpg')">
@@ -159,6 +166,9 @@
                             <div class="room-text">Стандартный номер дарит ощущение уюта и комфорта гостям,
                                 предпочитающим путешествовать в одиночестве или в паре.
                             </div>
+                            <a class="slider-link more-link">
+                                <span class="more-btn"></span>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -174,6 +184,9 @@
                             <div class="room-text">Стандартный номер дарит ощущение уюта и комфорта гостям,
                                 предпочитающим путешествовать в одиночестве или в паре.
                             </div>
+                            <a class="slider-link more-link">
+                                <span class="more-btn"></span>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -189,6 +202,9 @@
                             <div class="room-text">Стандартный номер дарит ощущение уюта и комфорта гостям,
                                 предпочитающим путешествовать в одиночестве или в паре.
                             </div>
+                            <a class="slider-link more-link">
+                                <span class="more-btn"></span>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -204,6 +220,9 @@
                             <div class="room-text">Стандартный номер дарит ощущение уюта и комфорта гостям,
                                 предпочитающим путешествовать в одиночестве или в паре.
                             </div>
+                            <a class="slider-link more-link">
+                                <span class="more-btn"></span>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -219,6 +238,9 @@
                             <div class="room-text">Стандартный номер дарит ощущение уюта и комфорта гостям,
                                 предпочитающим путешествовать в одиночестве или в паре.
                             </div>
+                            <a class="slider-link more-link">
+                                <span class="more-btn"></span>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -234,6 +256,9 @@
                             <div class="room-text">Стандартный номер дарит ощущение уюта и комфорта гостям,
                                 предпочитающим путешествовать в одиночестве или в паре.
                             </div>
+                            <a class="slider-link more-link">
+                                <span class="more-btn"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -387,6 +412,7 @@
                                   fill="black"/>
                         </svg>
                     </div>
+                    <div class="slider-pagination" id="discount-pagination"></div>
                 </div>
             </div>
         </div>
@@ -403,7 +429,9 @@
         <a href="tel:+78463337777" class="footer-phone">
             <h3>8 (846) 333-77-77</h3>
         </a>
-        <a class="footer-address" href="https://yandex.ru/maps/51/samara/house/novo_sadovaya_ulitsa_3/YUkYdwVmT0APQFtpfX5xdHpnZQ==/?ll=50.126994%2C53.205804&utm_source=main_stripe_big&z=17.23" target="_blank">
+        <a class="footer-address"
+           href="https://yandex.ru/maps/51/samara/house/novo_sadovaya_ulitsa_3/YUkYdwVmT0APQFtpfX5xdHpnZQ==/?ll=50.126994%2C53.205804&utm_source=main_stripe_big&z=17.23"
+           target="_blank">
             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.5 3.68164C11.8008 3.68152 10.1397 4.1853 8.7268 5.12927C7.31392 6.07325 6.21271 7.41501 5.56243 8.98487C4.91215 10.5547 4.74202 12.2822 5.07356 13.9487C5.40509 15.6153 6.2234 17.1461 7.42498 18.3475C8.97748 19.9 12.6409 22.1521 12.8557 24.5146C12.8557 24.6855 12.9235 24.8494 13.0444 24.9702C13.1652 25.091 13.3291 25.1589 13.5 25.1589C13.6709 25.1589 13.8348 25.091 13.9556 24.9702C14.0764 24.8494 14.1443 24.6855 14.1443 24.5146C14.3591 22.1521 18.0225 19.9 19.575 18.3475C20.7766 17.1461 21.5949 15.6153 21.9264 13.9487C22.2579 12.2822 22.0878 10.5547 21.4375 8.98487C20.7873 7.41501 19.686 6.07325 18.2732 5.12927C16.8603 4.1853 15.1992 3.68152 13.5 3.68164Z"
                       fill="#FF4433"/>
@@ -441,6 +469,7 @@
 </footer>
 <script src="js/jquery.js"></script>
 <script src="js/swiper.js"></script>
+<script src="js/jquery.viewportchecker.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="js/script.js"></script>
 </body>
