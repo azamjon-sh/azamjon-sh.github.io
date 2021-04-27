@@ -1556,6 +1556,10 @@ button {
             flex: 0 0 33%;
     max-width: 33%;
     padding: 0 11px;
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+    -webkit-transition-delay: 0s !important;
+            transition-delay: 0s !important;
   }
 
   .entertainment-list {

@@ -1408,6 +1408,8 @@ button {
     flex: 0 0 33%;
     max-width: 33%;
     padding: 0 11px;
+    animation-delay: 0s !important;
+    transition-delay: 0s !important;
   }
   .entertainment-list {
     padding: 0;
