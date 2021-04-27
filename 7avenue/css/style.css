@@ -1842,10 +1842,30 @@ button {
   .discount-title {
     margin-bottom: 24px;
   }
+
+  .discount {
+    padding-bottom: 24px;
+  }
 }
 @media (max-width: 425px) {
   .btn-booking.btn-brown {
-    display: none;
+    margin-left: 0;
+    padding-right: 0;
+    font-size: 8px;
+  }
+
+  .header-burger:after {
+    bottom: 23px;
+    width: 24px;
+  }
+
+  .header-burger:before {
+    top: 23px;
+    width: 24px;
+  }
+
+  .header-burger span, .introduction-burger span {
+    width: 24px;
   }
 
   #main-slider .slider-pagination {

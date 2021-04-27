@@ -13,7 +13,8 @@ body {
     overflow: hidden;
   }
 }
-.preloader{
+
+.preloader {
   position: fixed;
   top: 0;
   z-index: 9999;
@@ -22,23 +23,27 @@ body {
   height: 100vh;
   background-color: #fff;
 }
-.preloader-content{
+
+.preloader-content {
   padding-top: 106px;
   position: absolute;
   width: 202px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
-  .preloader-second{
+  transform: translate(-50%, -50%);
+
+  .preloader-second {
     margin-top: 12px;
     display: none;
     position: absolute;
     bottom: 0;
     left: 0;
   }
-  .preloader-first{
+
+  .preloader-first {
     display: none;
-    &.to-top{
+
+    &.to-top {
       transition: transform .3s;
       position: relative;
       transform: translateY(-106px);
@@ -363,9 +368,11 @@ button {
   border: 1px solid #BCBCBC;
   margin: 90px auto 0;
 }
-.introduction.scaled{
+
+.introduction.scaled {
   background-size: 125% 125%;
 }
+
 .introduction {
   width: 100%;
   height: 100vh;
@@ -894,6 +901,7 @@ button {
   height: 588px;
   display: none;
   max-width: 100%;
+
   #map {
     height: 100%;
     width: 100%;
@@ -991,12 +999,15 @@ button {
 .interlab-icon-small {
   display: none;
 }
+
 .visible {
   opacity: 1;
 }
+
 .hidden {
   opacity: 0;
 }
+
 @media (max-width: 1920px) {
   .introduction {
     max-height: 1080px;
@@ -1205,15 +1216,17 @@ button {
   .maps {
     height: 390px;
   }
-  .preloader-content{
+  .preloader-content {
     padding-top: 82px;
     position: absolute;
     width: 160px;
-    img{
+
+    img {
       max-width: 100%;
     }
-    .preloader-first{
-      &.to-top{
+
+    .preloader-first {
+      &.to-top {
         transform: translateY(-82px);
       }
     }
@@ -1221,7 +1234,7 @@ button {
 }
 
 @media (max-width: 1199px) {
-  .introduction.scaled,.introduction{
+  .introduction.scaled, .introduction {
     background-size: cover;
   }
   .about-link {
@@ -1272,15 +1285,17 @@ button {
 }
 
 @media (max-width: 1000px) {
-  .preloader-content{
+  .preloader-content {
     padding-top: 60px;
     position: absolute;
     width: 100px;
-    img{
+
+    img {
       max-width: 100%;
     }
-    .preloader-first{
-      &.to-top{
+
+    .preloader-first {
+      &.to-top {
         transform: translateY(-60px);
       }
     }
@@ -1607,7 +1622,7 @@ button {
   .maps {
     height: 473px;
   }
-  .footer-top{
+  .footer-top {
     padding: 28px 15px 36px;
   }
   .footer-logo {
@@ -1619,37 +1634,55 @@ button {
   }
   .footer-address {
     margin-top: 25px;
+
     svg {
       display: block;
       margin: 0 auto 5px;
       top: 0;
     }
   }
-  .footer-messenger{
+  .footer-messenger {
     margin-top: 36px;
   }
-  .interlab-icon-big{
+  .interlab-icon-big {
     display: none;
   }
-  .interlab-icon-small{
+  .interlab-icon-small {
     display: block;
   }
-  .discount-title{
+  .discount-title {
     margin-bottom: 24px;
   }
-}
-@media (max-width: 425px) {
-  .btn-booking.btn-brown{
-    display: none;
+  .discount {
+    padding-bottom: 24px;
   }
-  #main-slider .slider-pagination{
+}
+
+@media (max-width: 425px) {
+  .btn-booking.btn-brown {
+    margin-left: 0;
+    padding-right: 0;
+    font-size: 8px;
+  }
+  .header-burger:after {
+    bottom: 23px;
+    width: 24px;
+  }
+  .header-burger:before {
+    top: 23px;
+    width: 24px;
+  }
+  .header-burger span, .introduction-burger span {
+    width: 24px;
+  }
+  #main-slider .slider-pagination {
     font-size: 30px;
     margin: 0 20px;
   }
-  .room-right{
+  .room-right {
     padding: 15px;
   }
-  h4{
+  h4 {
     font-size: 22px;
   }
   .entertainment-name {
@@ -1657,8 +1690,9 @@ button {
     margin-top: 15px;
   }
 }
+
 @media (max-width: 374px) {
-  h3{
+  h3 {
     font-size: 35px;
     line-height: 50px;
   }
