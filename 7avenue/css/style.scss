@@ -429,12 +429,12 @@ button {
   margin-bottom: 100px;
 }
 
-.btn-play {
+.introduction .btn-play {
   margin: 0 auto;
   width: 61px;
   height: 61px;
   transition: opacity .3s;
-
+  padding: 0;
   &:hover {
     opacity: .7;
   }
@@ -442,13 +442,50 @@ button {
 
 .introduction-booking {
   position: absolute;
-  width: 830px;
+  width: 100%;
+  bottom: 10%;
+  left: 0;
+}
+
+.booking-parameter {
+  width: 831px;
   height: 80px;
   border-radius: 4px;
-  background-color: #FFFFFF;
-  bottom: 10%;
+  position: relative;
   left: 50%;
-  display: none;
+  transform: translateX(-50%);
+  background-color: #FFFFFF;
+  padding: 16px 0;
+  display: flex;
+}
+
+.booking-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 0 16px;
+
+  &:not(:last-child) {
+    border-right: 1px solid #EFEFEF;
+  }
+
+  .btn-brown {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+
+.booking-name {
+  font-size: 12px;
+  line-height: 170%;
+  color: #7A7A7A;
+}
+
+.booking-field {
+  font-size: 16px;
+  line-height: 170%;
+  color: #000000;
 }
 
 .about {
@@ -1321,14 +1358,35 @@ button {
     padding: 95px 0 0;
   }
   .introduction {
-    min-height: 400px;
-    max-height: 620px;
+    min-height: 600px;
+    max-height: 720px;
     background-position: bottom right;
   }
   .introduction-booking {
-    max-width: 80%;
-    height: 210px;
+    max-width: 100%;
     bottom: 25px;
+  }
+  .booking-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    &.arrival {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &.departure {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    .btn-brown{
+      max-width: 315px;
+    }
+  }
+  .booking-parameter {
+    width: 345px;
+    height: 210px;
+    flex-wrap: wrap;
   }
   .header {
     transform: translateY(0);
@@ -1697,5 +1755,8 @@ button {
   h3 {
     font-size: 35px;
     line-height: 50px;
+  }
+  .booking-parameter{
+    width: 300px;
   }
 }

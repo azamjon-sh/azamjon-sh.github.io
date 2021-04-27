@@ -460,26 +460,68 @@ button {
   margin-bottom: 100px;
 }
 
-.btn-play {
+.introduction .btn-play {
   margin: 0 auto;
   width: 61px;
   height: 61px;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
+  padding: 0;
 }
-.btn-play:hover {
+.introduction .btn-play:hover {
   opacity: .7;
 }
 
 .introduction-booking {
   position: absolute;
-  width: 830px;
+  width: 100%;
+  bottom: 10%;
+  left: 0;
+}
+
+.booking-parameter {
+  width: 831px;
   height: 80px;
   border-radius: 4px;
-  background-color: #FFFFFF;
-  bottom: 10%;
+  position: relative;
   left: 50%;
-  display: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #FFFFFF;
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.booking-item {
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 100%;
+  padding: 0 16px;
+}
+.booking-item:not(:last-child) {
+  border-right: 1px solid #EFEFEF;
+}
+.booking-item .btn-brown {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.booking-name {
+  font-size: 12px;
+  line-height: 170%;
+  color: #7A7A7A;
+}
+
+.booking-field {
+  font-size: 16px;
+  line-height: 170%;
+  color: #000000;
 }
 
 .about {
@@ -1443,15 +1485,43 @@ button {
   }
 
   .introduction {
-    min-height: 400px;
-    max-height: 620px;
+    min-height: 600px;
+    max-height: 720px;
     background-position: bottom right;
   }
 
   .introduction-booking {
-    max-width: 80%;
-    height: 210px;
+    max-width: 100%;
     bottom: 25px;
+  }
+
+  .booking-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .booking-item.arrival {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .booking-item.departure {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .booking-item .btn-brown {
+    max-width: 315px;
+  }
+
+  .booking-parameter {
+    width: 345px;
+    height: 210px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .header {
@@ -1894,5 +1964,9 @@ button {
   h3 {
     font-size: 35px;
     line-height: 50px;
+  }
+
+  .booking-parameter {
+    width: 300px;
   }
 }
