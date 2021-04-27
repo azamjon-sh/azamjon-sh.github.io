@@ -12,6 +12,7 @@ $(document).ready(function () {
     }, 500);
     let timerId = setTimeout(startPreload, 2000, false)
     var rooms = new Swiper('#main-slider', {
+        effect: 'fade',
         pagination: {
             el: '#main-slider .slider-pagination',
             type: 'fraction',
@@ -21,11 +22,7 @@ $(document).ready(function () {
             nextEl: '#main-slider .arrow-next',
             prevEl: '#main-slider .arrow-prev',
         },
-        breakpoints: {
-            1000: {
-                effect: 'fade',
-            },
-        },
+
     });
     var discounts = new Swiper('#discount', {
         slidesPerView: 3,
