@@ -59,20 +59,59 @@ $(document).ready(function () {
     })
     var header = $('.header');
     $(window).on('scroll', function () {
-        if ($(this).scrollTop() > $('.introduction').height()) {
-            if (!(header.hasClass('show'))) {
-                header.addClass('show')
+        if ($('.introduction').length) {
+            if ($(this).scrollTop() > $('.introduction').height()) {
+                if (!(header.hasClass('show'))) {
+                    header.addClass('show')
+                }
+            } else {
+                if ((header.hasClass('show'))) {
+                    header.removeClass('show')
+                }
             }
         } else {
-            if ((header.hasClass('show'))) {
-                header.removeClass('show')
+            if ($(this).scrollTop() > 50) {
+                if (!(header.hasClass('show'))) {
+                    header.addClass('show')
+                }
+            } else {
+                if ((header.hasClass('show'))) {
+                    header.removeClass('show')
+                }
             }
         }
     })
-    ymaps.ready(function () {
-        initMaps();
-    });
+    if ($('#map').length) {
+        ymaps.ready(function () {
+            initMaps();
+        });
+    }
+    $('.contact-submit').click(ValidMail)
 })
+
+function ValidMail() {
+    var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+    var mail = $('#sub-email').val()
+    var output;
+    if (mail != '') {
+        if (pattern.test(mail) != false) {
+            if ($('#contact-politic').is(':checked')) {
+                $('.contact-form').removeClass('error').addClass('success')
+                $('.success-message').fadeIn()
+            } else {
+                $('.contact-form').addClass('error')
+                output = 'Ознакомтесь с политикой конфиденциальности'
+            }
+        } else {
+            $('.contact-form').addClass('error')
+            output = 'Произошла ошибка. Указанный E-mail некорректен'
+        }
+    } else {
+        $('.contact-form').addClass('error')
+        output = 'Произошла ошибка. Указанный E-mail некорректен'
+    }
+    $('.error-message').text(output)
+}
 
 function startPreload() {
     $('body').removeClass('no-scroll')

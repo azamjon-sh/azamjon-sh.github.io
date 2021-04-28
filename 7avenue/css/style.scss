@@ -91,7 +91,7 @@ h5 {
   font-weight: 400;
 }
 
-h5 {
+h6 {
   font-family: 'Kudryashev Headline', sans-serif;
   font-size: 26px;
   line-height: 40px;
@@ -151,15 +151,30 @@ button {
   left: 0;
   z-index: 5;
   background-color: #FFFFFF;
-  transform: translateY(-100%);
-  transition: transform .3s;
   width: 100%;
+  transition: all .3s;
 }
 
-.header.show {
+.main-page {
+  .header {
+    position: fixed;
+    transform: translateY(-100%);
+    padding: 0;
+  }
+}
+
+.main-page .header.show {
   transform: translateY(0);
+  padding: 0;
 }
 
+.header-logo {
+  height: 50px;
+
+  img {
+    max-height: 100%;
+  }
+}
 
 .header-right {
   display: flex;
@@ -170,10 +185,19 @@ button {
 
 .header-wrap {
   width: 100%;
-  height: 80px;
   display: flex;
+  padding: 64px 0 15px;
   align-items: center;
   justify-content: space-between;
+  transition: padding .3s;
+}
+
+.show .header-wrap {
+  padding: 15px 0;
+}
+
+.main-page .header-wrap {
+  padding: 15px;
 }
 
 .header-burger, .introduction-burger {
@@ -435,6 +459,7 @@ button {
   height: 61px;
   transition: opacity .3s;
   padding: 0;
+
   &:hover {
     opacity: .7;
   }
@@ -1065,6 +1090,10 @@ button {
   .introduction-text {
     transform: translateY(-50px);
   }
+  h2 {
+    font-size: 50px;
+    line-height: 76px;
+  }
   h3 {
     font-size: 40px;
     line-height: 61px;
@@ -1379,7 +1408,8 @@ button {
       flex: 0 0 50%;
       max-width: 50%;
     }
-    .btn-brown{
+
+    .btn-brown {
       max-width: 315px;
     }
   }
@@ -1388,7 +1418,7 @@ button {
     height: 210px;
     flex-wrap: wrap;
   }
-  .header {
+  .main-page .header {
     transform: translateY(0);
   }
   h1 {
@@ -1544,6 +1574,16 @@ button {
 }
 
 @media (max-width: 767px) {
+  .fullscreen-close {
+    top: 0;
+    right: 0;
+  }
+  .header {
+    padding: 0;
+  }
+  .header.show {
+    padding: 0;
+  }
   .header-logo {
     height: 35px;
 
@@ -1551,6 +1591,7 @@ button {
       max-height: 100%;
     }
   }
+
   .btn-booking.btn-brown {
     font-size: 10px;
 
@@ -1558,6 +1599,7 @@ button {
       font-size: 11px;
     }
   }
+
   .header-burger {
     width: 60px;
     height: 60px;
@@ -1572,50 +1614,64 @@ button {
       bottom: 20px;
     }
   }
-  .header-wrap {
-    height: 60px;
+
+  .main-page .header-wrap, .header-wrap {
+    padding: 0;
   }
+
   h1 {
     font-size: 32px;
     line-height: 140%;
   }
+
   .introduction-title {
     margin-bottom: 30px;
   }
+
   .btn-play {
     padding: 0;
   }
+
   .introduction {
     height: 620px;
   }
+
   .about-text {
     max-width: unset;
   }
+
   .about {
     padding: 30px 0;
   }
+
   .about-title {
     margin: 8px 0;
   }
+
   .about-description {
     display: block;
     z-index: 2;
     position: relative;
   }
+
   .more-link {
     font-size: 12px;
   }
+
   .more-btn {
     width: 30px;
     height: 30px;
     margin-right: 10px;
   }
+
   .more-btn:before {
     width: 26px;
   }
+
   .about-link {
     margin-top: 15px;
   }
+
   .img-left, .img-right {
     overflow-x: hidden;
 
@@ -1625,73 +1681,93 @@ button {
       height: 250px;
     }
   }
+
   .content {
     padding: 0 15px;
   }
+
   .slider-controls {
     padding: 0 14px;
   }
+
   .rooms {
     padding: 20px 0;
   }
+
   .rooms-text {
     font-size: 16px;
   }
+
   #main-slider .slider-pagination {
     font-size: 40px;
     line-height: 61px;
   }
+
   .restaurant {
     height: auto;
     max-height: unset;
     padding: 27px 0;
     min-height: unset;
   }
+
   .restaurant-wrap {
     height: 480px;
   }
+
   .restaurant-title {
     font-size: 40px;
     line-height: 61px;
   }
+
   .restaurant-subtitle {
     font-size: 14px;
     margin-bottom: 125px;
   }
+
   .entertainment-item {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   .entertainment-title {
     margin-bottom: 24px;
   }
+
   .entertainment {
     padding-bottom: 24px;
   }
+
   #discount-pagination {
     text-align: center;
     margin-top: 30px;
   }
+
   .swiper-pagination-bullet {
     background-color: #fff;
     opacity: 1;
   }
+
   .swiper-pagination-bullet-active {
     background-color: #7A7A7A;
   }
+
   .maps {
     height: 473px;
   }
+
   .footer-top {
     padding: 28px 15px 36px;
   }
+
   .footer-logo {
     width: 78px;
   }
+
   .footer-phone {
     font-size: 30px;
     line-height: 46px;
   }
+
   .footer-address {
     margin-top: 25px;
 
@@ -1701,21 +1777,27 @@ button {
       top: 0;
     }
   }
+
   .footer-messenger {
     margin-top: 36px;
   }
+
   .interlab-icon-big {
     display: none;
   }
+
   .interlab-icon-small {
     display: block;
   }
+
   .discount-title {
     margin-bottom: 24px;
   }
+
   .discount {
     padding-bottom: 24px;
   }
+
 }
 
 @media (max-width: 425px) {
@@ -1752,11 +1834,560 @@ button {
 }
 
 @media (max-width: 374px) {
+  h2 {
+    font-size: 40px;
+    line-height: 61px;
+  }
   h3 {
     font-size: 35px;
     line-height: 50px;
   }
-  .booking-parameter{
+  .booking-parameter {
     width: 300px;
   }
 }
+
+.inner-page {
+  .main {
+    padding-top: 130px;
+  }
+
+  .header.show {
+    .header-wrap {
+      padding-top: 15px;
+    }
+  }
+
+  .footer-top {
+    padding: 44px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EFEFEF;
+  }
+
+  .footer-left {
+    flex: 0 0 auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+
+    a {
+      flex: 0 0 auto;
+      max-width: 100%;;
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    .footer-phone {
+      margin-right: 64px;
+    }
+  }
+
+  .icon-fon {
+    margin-right: 16px;
+    width: 56px;
+    height: 56px;
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+
+    .icon, svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #BCBCBC;
+      font-size: 17px;
+    }
+  }
+
+  .contact-text {
+    font-size: 16px;
+    line-height: 170%;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .footer-messenger {
+    margin-top: 0;
+  }
+
+  .messenger-item {
+    width: 56px;
+    height: 56px;
+    background-color: #D7B56D;
+    position: relative;
+    margin-left: 48px;
+    margin-right: 0;
+
+    .icon {
+      color: #FFFFFF;
+      font-size: 22px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+}
+
+@media (max-width: 1199px) {
+  .inner-page {
+    .footer-top {
+      padding: 30px;
+    }
+
+    .messenger-item {
+      width: 45px;
+      height: 45px;
+      margin-left: 30px;
+    }
+
+    .icon-fon {
+      width: 45px;
+      height: 45px;
+
+      .icon {
+        margin-right: 10px;
+      }
+    }
+
+    .contact-text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .inner-page {
+    .main {
+      padding-top: 85px;
+    }
+
+    .header-logo {
+      height: 35px;
+    }
+
+    .header-wrap {
+      padding: 30px 0 15px;
+    }
+
+    .footer-left {
+      display: block;
+
+      .footer-phone {
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .inner-page {
+    .header-wrap {
+      padding: 20px 0 0;
+    }
+
+    .header.show {
+      .header-wrap {
+        padding: 0;
+      }
+    }
+
+    .footer-top {
+      display: block;
+    }
+
+    .footer-messenger {
+      margin-top: 20px;
+    }
+
+    .contact-text {
+      text-align: left;
+
+      display: inline-block;
+    }
+
+    .icon-fon {
+      flex: 0 0 45px;
+      max-width: 45px;
+    }
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 32px;
+  padding: 6px 0;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  font-size: 12px;
+  line-height: 170%;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color .3s;
+
+  &:not(:last-child):after {
+    content: '–';
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  &:hover {
+    color: #D7B56D;
+  }
+}
+
+.contact {
+  margin-bottom: 128px;
+}
+
+.contact-title {
+  margin-bottom: 64px;
+}
+
+.contact-wrap {
+  display: flex;
+}
+
+.contact-list {
+  flex: 0 0 auto;
+  max-width: 100%;
+  padding-right: 80px;
+}
+
+.contact-item {
+  margin-bottom: 50px;
+}
+
+.contact-name {
+  font-size: 14px;
+  line-height: 170%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #BCBCBC;
+}
+
+.contact-link {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 150%;
+  color: #000000;
+  text-decoration: none;
+}
+
+.contact-map {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-height: 100%;
+  width: 100px;
+
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contact-messenger {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  a {
+    text-decoration: none;
+    background-color: #EFEFEF;
+    border-radius: 50%;
+    margin: 0 50px 0 0;
+    width: 56px;
+    position: relative;
+    height: 56px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: black;
+  }
+}
+
+.contact-form {
+  text-align: center;
+  margin-bottom: 128px;
+}
+
+.contact-form-title {
+  margin-bottom: 24px;
+}
+
+.contact-checkbox {
+  margin-bottom: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  label, label a {
+    font-size: 12px;
+    line-height: 170%;
+    color: #000000;
+    cursor: pointer;
+  }
+}
+
+.contact-politic {
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  &:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000000;
+    display: inline-block;
+    visibility: visible;
+    border-radius: 1px;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  &:checked:before {
+    background-image: url("../img/chek.svg");
+  }
+}
+
+.error-message {
+  display: none;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-10px);
+  font-size: 18px;
+  line-height: 0px;
+  text-align: center;
+  color: #FF0000;
+}
+
+.success-message {
+  display: none;
+  color: #D7B56D;
+}
+
+.error .error-message {
+  display: block;
+}
+
+.success {
+  .contact-email {
+    display: none;
+  }
+
+  .contact-checkbox {
+    display: none;
+  }
+}
+
+.contact-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    display: inline-block;
+    width: 750px;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 22px;
+    line-height: 150%;
+    color: #000;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .contact-submit {
+    font-size: 16px;
+    line-height: 170%;
+    padding: 10px 30px;
+    margin: 0 0 0 40px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .contact-name {
+    font-size: 12px;
+  }
+  .contact-link {
+    font-size: 18px;
+  }
+
+  .contact-item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .contact-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  h5 {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .contact-email {
+    input {
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+      padding: 6px;
+      font-size: 18px;
+    }
+
+    .contact-submit {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .contact {
+    margin-bottom: 60px;
+  }
+  .contact-item {
+    flex: 0 0 50%;
+    margin-bottom: 30px;
+    max-width: 50%;
+    padding-right: 40px;
+  }
+  .contact-form-title {
+    max-width: 600px;
+    display: block;
+    margin: 0 auto 24px;
+  }
+  .contact-item:last-child {
+    margin-bottom: 30px;
+  }
+  .contact-map {
+    flex: unset;
+    max-width: unset;
+    width: 100%;
+    height: 400px;
+  }
+  .contact-list {
+    padding-right: 0;
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contact-wrap {
+    display: block;
+  }
+  .contact-email {
+    position: relative;
+
+    .contact-submit {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form{
+    margin-bottom: 60px;
+  }
+  .error-message {
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    font-size: 12px;
+    text-align: left;
+    line-height: 120%;
+  }
+  .contact-item {
+    padding-right: 15px;
+    margin-bottom: 20px;
+  }
+  .contact-name {
+    font-size: 10px;
+  }
+  .contact-link {
+    font-size: 16px;
+  }
+  .contact-messenger {
+    .icon {
+      font-size: 18px;
+    }
+
+    a {
+      margin-right: 20px;
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  .contact-email input {
+    text-align: left;
+  }
+  .contact-map {
+    height: 350px;
+  }
+}
+
+@media (max-width: 425px) {
+  .contact-email .contact-submit {
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+  .contact-email input {
+    padding: 4px;
+    font-size: 16px;
+  }
+  .contact-checkbox label, .contact-checkbox label a {
+    font-size: 10px;
+  }
+  .contact-politic:before {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
