@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?8swo7d');
-  src:  url('fonts/icomoon.eot?8swo7d#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?8swo7d') format('truetype'),
-    url('fonts/icomoon.woff?8swo7d') format('woff'),
-    url('fonts/icomoon.svg?8swo7d#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?rir1oz');
+  src:  url('fonts/icomoon.eot?rir1oz#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?rir1oz') format('truetype'),
+    url('fonts/icomoon.woff?rir1oz') format('woff'),
+    url('fonts/icomoon.svg?rir1oz#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -39,4 +39,43 @@
 }
 .icon-vk:before {
   content: "\e904";
+}
+.icon-beach-umbrella:before {
+  content: "\e905";
+}
+.icon-cil-tv:before {
+  content: "\e906";
+}
+.icon-cleaning:before {
+  content: "\e907";
+}
+.icon-conditioner:before {
+  content: "\e908";
+}
+.icon-drop:before {
+  content: "\e909";
+}
+.icon-hair-dryer:before {
+  content: "\e90a";
+}
+.icon-hanger:before {
+  content: "\e90b";
+}
+.icon-ironing-board:before {
+  content: "\e90c";
+}
+.icon-safebox:before {
+  content: "\e90d";
+}
+.icon-tea:before {
+  content: "\e90e";
+}
+.icon-telephone:before {
+  content: "\e90f";
+}
+.icon-towels:before {
+  content: "\e910";
+}
+.icon-wifi:before {
+  content: "\e911";
 }

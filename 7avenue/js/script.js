@@ -17,7 +17,7 @@ $(document).ready(function () {
             el: '#main-slider .slider-pagination',
             type: 'fraction',
         },
-        longSwipesMs: 50,
+        speed: 50,
         navigation: {
             nextEl: '#main-slider .arrow-next',
             prevEl: '#main-slider .arrow-prev',
@@ -48,6 +48,14 @@ $(document).ready(function () {
                 slidesPerView: 3,
             },
         }
+    });
+    var roomInner = new Swiper('#inner-slider', {
+        slidesPerView: 1.33,
+        centerSlides:true,
+        loop: true,
+        spaceBetween: 32,
+        pagination: false,
+        navigation: false,
     });
     $('.fullscreen-close').click(function () {
         $('.header-fullscreen').slideUp()
