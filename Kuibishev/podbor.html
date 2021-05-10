@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Выбор по параметрам</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#ff5c30">
+    <meta name="msapplication-TileColor" content="#ff5c30">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="fonts/arsenal/stylesheet.css">
+    <link rel="stylesheet" href="fonts/inter/stylesheet.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="css/choices.min.css"/>
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="fonts/font-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-page">
+<!--<div class="preloader">-->
+<!--    <div class="preloader-text">-->
+<!--        <img src="img/logo-black.svg" alt="">-->
+<!--    </div>-->
+<!--</div>-->
+<header class="header">
+    <div class="content">
+        <div class="header-wrap">
+            <div class="header-item header-burger">
+                <div class="menu-open">
+                    <span></span>
+                </div>
+            </div>
+            <a href="#" class="header-item header-logo">
+                <img class="logo-white" src="img/logo-white.svg" alt="">
+                <img class="logo-black" src="img/logo-black.svg" alt="">
+            </a>
+            <div class="header-item header-menu">
+                <div class="header-menu-item header-menu-disable">Квартиры:
+                </div>
+                <a href="#" class="header-menu-item header-menu-flat">На 3D плане</a> /
+                <a href="#" class="header-menu-item header-menu-flat">По параметрам</a>
+                <a href="#" class="header-menu-item">О проекте</a>
+                <a href="#" class="header-menu-item">Бизнесу</a>
+                <a href="#" class="header-menu-item">Ипотека</a>
+                <a href="#" class="header-menu-item">Контакты</a>
+                <div class="header-phone">
+                    <a href="tel:+78469799205">8 (846) 979-92-05</a>
+                </div>
+            </div>
+            <div class="header-item header-mob-phone">
+                <a href="tel:+78469799205"><span class="icon-phone-call"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="header-mob-menu">
+        <div class="mob-menu-top">
+            <div class="header-mob-item">
+                <div class="menu-close">
+                    <span></span>
+                </div>
+            </div>
+            <a href="#" class="header-mob-item header-logo">
+                <img src="img/logo-black.svg" alt="">
+            </a>
+
+            <div class="header-mob-item header-mob-phone">
+                <a href="tel:+78469799205"><span class="icon-phone-call"></span></a>
+            </div>
+        </div>
+        <div class="mob-menu-flat">Выюрать квартиру:</div>
+        <div class="header-menu-flat">
+            <a href="#" class="mob-menu-item">
+                <img src="img/3d-flats.jpg" alt=""><span>На 3D плане</span></a>
+            <a href="#" class="mob-menu-item">
+                <img src="img/parameter-flats.jpg"><span>По параметрам</span></a>
+        </div>
+        <div class="header-bottom-menu">
+            <a href="#" class="header-menu-item">О проекте</a>
+            <a href="#" class="header-menu-item">Бизнесу</a>
+            <a href="#" class="header-menu-item">Ипотека</a>
+            <a href="#" class="header-menu-item">Контакты</a>
+        </div>
+        <a class="mob-menu-phone" href="tel:+78469799205">8 (846) 979-92-05</a>
+    </div>
+</header>
+<main class="main">
+    <div class="breadcrumb">
+        <div class="content">
+            <div class="breadcrumb-list">
+                <a href="#" class="breadcrumb-item">Главная</a>
+                <a href="#" class="breadcrumb-item active">Выбор по параметрам</a>
+            </div>
+        </div>
+    </div>
+    <div class="selection">
+        <div class="content">
+            <h2 class="page-title">
+                Выбор по параметрам
+            </h2>
+            <div class="selection-filter" id="selection-filter">
+                <div class="selection-row">
+
+                    <div class="selection-col col-3 selection-rooms">
+                        <div class="selection-field-name">Количество комнат</div>
+                        <div class="room-count" id="room-count">
+                            <div class="room-item" data-rooms="st">Ст.</div>
+                            <div class="room-item" data-rooms="1">1к</div>
+                            <div class="room-item" data-rooms="2">2к</div>
+                        </div>
+                    </div>
+                    <div class="selection-col col-3">
+                        <div class="selection-field-name">Общая площадь, м²</div>
+                        <div class="selection-fields">
+                            <input type="text" class="selection-from area-from" id="area-from" value="1">
+                            <input type="text" class="selection-to area-to" id="area-to" value="108,59">
+                        </div>
+                        <input type="text" class="selection-range" id="area-range" name="area-range" data-min="1"
+                               data-max="108.59" data-step="0.1" data-from="1">
+                    </div>
+                    <div class="selection-col col-3">
+                        <div class="selection-field-name">Стоимость, ₽</div>
+                        <div class="selection-fields">
+                            <input type="text" class="selection-from cost-from" id="cost-from" value="0">
+                            <input type="text" class="selection-to cost-to" id="cost-to"
+                                   value="6 470 400">
+                        </div>
+                        <input type="text" class="selection-range" id="cost-range" name="cost-range" data-min="0"
+                               data-max="6470400" data-step="10000" data-from="0">
+                    </div>
+                    <div class="selection-col col-3">
+                        <div class="selection-field-name">Срок сдачи</div>
+                        <select class="form-control" name="deadline"
+                                id="deadline">
+                            <option value="all">Любой</option>
+                            <option value="11">
+                                IV квартал 2023
+                            </option>
+                            <option value="122">
+                                III квартал 2023
+                            </option>
+                            <option value="133">II квартал 2023</option>
+                        </select>
+                    </div>
+                    <div class="selection-col filter-result"></div>
+                </div>
+                <div class="filter-delete" data-max-cost="6470400" data-max-area="108,59"
+                     data-deadline="all" data-rooms="all">Очистить фильтр
+                </div>
+            </div>
+            <div class="apartment-list row">
+                <div class="apartment-item" data-visible="1" data-deadline="11" data-rooms="1" data-id="429"
+                     data-area="58.8" data-engname="p2"
+                     data-price="4166400">
+                    <div class="apartment-wrap">
+                        <div class="apartment-img">
+                            <img src="img/flat-1.png" alt="">
+                        </div>
+                        <h5 class="apartment-name">Однокомнатная 58.8 м²</h5>
+                        <div class="apartment-parameters">
+                            <span>Этаж 6</span>
+                            <span>Дом 14</span>
+                            <span>Сек. 3</span>
+                        </div>
+                        <a href="#" class="apartment-price btn btn-orange">
+                            4 166 400 ₽
+                        </a>
+                        <div class="apartment-date">
+                            IV квартал 2023
+                        </div>
+                    </div>
+                </div>
+                <div class="apartment-item" data-visible="1" data-deadline="11" data-rooms="2" data-id="429"
+                     data-area="101.8" data-engname="p2"
+                     data-price="3653302">
+                    <div class="apartment-wrap">
+                        <div class="apartment-img">
+                            <img src="img/flat-1.png" alt="">
+                        </div>
+                        <h5 class="apartment-name">Двухкомнатная 101.8м²</h5>
+                        <div class="apartment-parameters">
+                            <span>Этаж 6</span>
+                            <span>Дом 14</span>
+                            <span>Сек. 3</span>
+                        </div>
+                        <a href="#" class="apartment-price btn btn-purple">
+                            3 653 302 ₽
+                        </a>
+                        <div class="apartment-date">
+                            IV квартал 2023
+                        </div>
+                    </div>
+                </div>
+                <div class="apartment-item" data-visible="1" data-deadline="11" data-rooms="st" data-id="429"
+                     data-area="48.8" data-engname="p2"
+                     data-price="2500000">
+                    <div class="apartment-wrap">
+                        <div class="apartment-img">
+                            <img src="img/flat-1.png" alt="">
+                        </div>
+                        <h5 class="apartment-name">Студия 48.8 м²</h5>
+                        <div class="apartment-parameters">
+                            <span>Этаж 6</span>
+                            <span>Дом 14</span>
+                            <span>Сек. 3</span>
+                        </div>
+                        <a href="#" class="apartment-price btn btn-yellow">
+                            2 500 000 ₽
+                        </a>
+                        <div class="apartment-date">
+                            IV квартал 2023
+                        </div>
+                    </div>
+                </div>
+                <div class="apartment-item" data-visible="1" data-deadline="11" data-rooms="1" data-id="429"
+                     data-area="58.8" data-engname="p2"
+                     data-price="2990000">
+                    <div class="apartment-wrap">
+                        <div class="apartment-img">
+                            <img src="img/flat-1.png" alt="">
+                        </div>
+                        <h5 class="apartment-name">Однокомнатная 58.8 м²</h5>
+                        <div class="apartment-parameters">
+                            <span>Этаж 6</span>
+                            <span>Дом 14</span>
+                            <span>Сек. 3</span>
+                        </div>
+                        <a href="#" class="apartment-price btn btn-orange">
+                            2 990 000 ₽
+                        </a>
+                        <div class="apartment-date">
+                            IV квартал 2023
+                        </div>
+                    </div>
+                </div>
+                <div class="apartment-item" data-visible="1" data-deadline="11" data-rooms="2" data-id="429"
+                     data-area="78.8" data-engname="p2"
+                     data-price="4599000">
+                    <div class="apartment-wrap">
+                        <div class="apartment-img">
+                            <img src="img/flat-1.png" alt="">
+                        </div>
+                        <h5 class="apartment-name">Двухкомнатная 78.8 м²</h5>
+                        <div class="apartment-parameters">
+                            <span>Этаж 6</span>
+                            <span>Дом 14</span>
+                            <span>Сек. 3</span>
+                        </div>
+                        <a href="#" class="apartment-price btn btn-purple">
+                            4 599 000 ₽
+                        </a>
+                        <div class="apartment-date">
+                            IV квартал 2023
+                        </div>
+                    </div>
+                </div>
+                <div class="apartment-item" data-visible="1" data-deadline="11" data-rooms="st" data-id="429"
+                     data-area="42.8" data-engname="p2"
+                     data-price="3200000">
+                    <div class="apartment-wrap">
+                        <div class="apartment-img">
+                            <img src="img/flat-1.png" alt="">
+                        </div>
+                        <h5 class="apartment-name">Студия 42.8 м²</h5>
+                        <div class="apartment-parameters">
+                            <span>Этаж 6</span>
+                            <span>Дом 14</span>
+                            <span>Сек. 3</span>
+                        </div>
+                        <a href="#" class="apartment-price btn btn-yellow">
+                            3 200 000 ₽
+                        </a>
+                        <div class="apartment-date">
+                            IV квартал 2023
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="content">
+            <div class="footer-top-wrap">
+                <a href="tel:+78469799205" class="footer-phone">
+                    <div class="footer-phone-icon">
+                        <span class="icon icon-phone-call"></span>
+                    </div>
+                    <span>8 (846) 979-92-05</span>
+                </a>
+                <div class="footer-contacts">
+                    <div class="footer-contacts-name">Отдел продаж</div>
+                    <div class="footer-contacts-link">г. Самара, ул. Чкалова, д. 100, 2 этаж, оф. 231</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="content">
+            <div class="footer-bottom-wrap">
+                <div class="footer-bottom-left">
+                    © 2021 ГК «Самарский проект»
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <a href="https://internetlab.ru/" class="footer-bottom-right">
+                    <img class="interlab-icon-small" src="img/internetlab-small.svg" alt="">
+                    <img class="interlab-icon-big" src="img/internetlab-big.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Создаём карту -->
+<script>
+    var CATEGORY_OBJECTS = {
+        'c1': {
+            'id': '1',
+            'name': 'Школы',
+            'icon': 'icon-binoculars',
+            'balloon': 'img/school.svg'
+        },
+        'c2': {
+            'id': '2',
+            'name': 'Магнит',
+            'icon': 'icon-fork',
+            'balloon': 'img/shops.svg'
+        },
+        'c3': {
+            'id': '3',
+            'name': 'Медицина',
+            'icon': 'icon-cocktail',
+            'balloon': 'img/medecine.svg'
+        },
+        'c4': {
+            'id': '4',
+            'name': 'Детские сады',
+            'icon': 'icon-amusement',
+            'balloon': 'img/kinder.svg'
+        },
+        'c5': {
+            'id': '5',
+            'name': 'Спорт',
+            'icon': 'icon-amusement',
+            'balloon': 'img/traning.svg'
+        },
+        'c6': {
+            'id': '6',
+            'name': 'Маршруты',
+            'icon': 'icon-theater',
+            'balloon': 'img/bus.svg'
+        }
+    };
+    var OBJECTS = {
+        "partners": [{
+            "id": 10,
+            "name": "МБОУ школа № 100 г.о. Самара",
+            "address": "улица Тополей, 10",
+            "photo": "",
+            "categoryId": 1,
+            "coords": "53.265751, 50.225417",
+        }, {
+            "id": 11,
+            "name": "Пятёрочка",
+            "address": "Лесная линия, 46Б",
+            "photo": "",
+            "categoryId": 2,
+            "coords": "53.288072, 50.222992",
+        }, {
+            "id": 12,
+            "name": "Самарская городская поликлиника № 1",
+            "address": "ул. Тополей, 12",
+            "photo": "",
+            "categoryId": 3,
+            "coords": "53.264466, 50.227375",
+        }, {
+            "id": 13,
+            "name": "Кораблик детства",
+            "address": "улица Тополей, 10",
+            "photo": "",
+            "categoryId": 4,
+            "coords": "53.271087, 50.218219",
+        }, {
+            "id": 14,
+            "name": "Клуб спортивных единоборств и фитнеса Прайд",
+            "address": "Демократическая ул., 45А",
+            "photo": "",
+            "categoryId": 5,
+            "coords": "53.274061, 50.226674",
+        }, {
+            "id": 15,
+            "name": "Остановка Дачи",
+            "address": "",
+            "photo": "",
+            "categoryId": 6,
+            "coords": "53.291007, 50.223804",
+        }]
+    }
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/jquery.inputmask.js"></script>
+<script src="js/jquery_maska.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/choices.min.js"></script>
+<script src="js/jquery.viewportchecker.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/map-objects.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

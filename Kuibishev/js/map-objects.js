@@ -1,5 +1,6 @@
-$(function() {
-    initMapObjects();
+$(function () {
+    if ($('#map').length)
+        initMapObjects();
 });
 
 function initMapObjects() {
@@ -70,7 +71,7 @@ function initMapObjects() {
     var $currentObject = $objectsList.find('.object.active');
     if ($currentObject.length) {
         //для основной - скролл блока!
-        if ($(window).width()*1 > 1000) {
+        if ($(window).width() * 1 > 1000) {
             var top = $currentObject.offset().top - $('#header_bar').height() * 1 - $('#page_caption').height() * 1 - 85;
             $objectsList.find('.scroll-content').scrollTop(top);
         } else {
@@ -156,7 +157,7 @@ function initMapObjects() {
                         addressHTML = '<p class="address">' + address + '</p>';
                     }
 
-                    var balloonDesc = '<div class="balloon-info"><a href="'+url+'" class="with-photo-block ' + addClass + '">' + photoHTML + '<p class="name">' + name + '</p>' + addressHTML + '<div class="clr"></div></a><p><a class="external-link" href="https://yandex.ru/maps/samara/?mode=whatshere&ll=' + coords[1] + '%2C' + coords[0] + '&z=17&whatshere%5Bpoint%5D=' + coords[1] + '%2C' + coords[0] + '&whatshere%5Bzoom%5D=17" target="_blank">Смотреть на Яндекс.Картах</a></p></div>';
+                    var balloonDesc = '<div class="balloon-info"><a href="' + url + '" class="with-photo-block ' + addClass + '">' + photoHTML + '<p class="name">' + name + '</p>' + addressHTML + '<div class="clr"></div></a><p><a class="external-link" href="https://yandex.ru/maps/samara/?mode=whatshere&ll=' + coords[1] + '%2C' + coords[0] + '&z=17&whatshere%5Bpoint%5D=' + coords[1] + '%2C' + coords[0] + '&whatshere%5Bzoom%5D=17" target="_blank">Смотреть на Яндекс.Картах</a></p></div>';
 
                     //если на странице просмотра объекта
                     //добавляем увеличенный балун для текущего объекта и позиционируем карту!
@@ -226,7 +227,7 @@ function initMapObjects() {
             if (type == 'category') {
                 map.setBounds(objectManager.getBounds());
 
-                map.events.add(['boundschange','datachange','objecttypeschange'], function(e){
+                map.events.add(['boundschange', 'datachange', 'objecttypeschange'], function (e) {
                     // console.log(map.getBounds());
                     // var count = 0;
                     // objectManager.objects.each(function (object) {
