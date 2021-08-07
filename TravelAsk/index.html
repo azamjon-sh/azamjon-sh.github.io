@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TravelAsk</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="header">
+</header>
+<main class="main">
+    <div class="content">
+        <div class="hotel">
+            <div class="hotel-filter">
+                <div class="hotel-filter-item hotel-select">
+                    <h3 class="filter-name">Поиск по странам и городам</h3>
+                    <div class="hotel-filter-bottom">
+                        <select class="hotel-city" name="country">
+                            <option value="all">Введите страну, например, Россия</option> <option value="greece">Греция</option>
+                            <option value="russia">Россия</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="hotel-filter-item hotel-stars">
+                    <h3 class="filter-name">Звезды</h3>
+                    <div class="hotel-filter-bottom">
+                        <label for="0">
+                            <input type="checkbox" id="0">
+                            Без звезд
+                        </label>
+                        <label for="1">
+                            <input type="checkbox" id="1">
+                            1 звезда
+                        </label>
+                        <label for="2">
+                            <input type="checkbox" id="2">
+                            2 звезды
+                        </label>
+                        <label for="3">
+                            <input type="checkbox" id="3">
+                            3 звезды
+                        </label>
+                        <label for="4">
+                            <input type="checkbox" id="4">
+                            4 звезды
+                        </label>
+                        <label for="5">
+                            <input type="checkbox" id="5">
+                            5 звезд
+                        </label>
+                    </div>
+                </div>
+                <div class="hotel-filter-item hotel-type-filter">
+                    <h3 class="filter-name">Тип</h3>
+                    <div class="hotel-filter-bottom">
+                        <div class="hotel-type-name hotels">Отели</div>
+                        <div class="hotel-type-name apartment">Апартаменты</div>
+                    </div>
+                </div>
+                <div class=" hotel-filter-item">
+                    <h3 class="filter-name">Цена</h3>
+                    <div class="hotel-filter-bottom">
+                        <input class="hotel-range" name="hotel-range" id="hotel-range">
+                    </div>
+                </div>
+            </div>
+            <div class="hotel-list">
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+
+</footer>
+<script src="js/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    let hotels = [
+        {
+            "name": "Marina Inn",
+            "country": "Греция",
+            "address": "Фалираки, Родос, Греция",
+            "stars": 4,
+            "type": "Отель",
+            "description": "Этот 4-звездочный отель расположен в центре города. На его территории есть бассейн с террасой и сауна. Из номеров открывается вид на море или на средневековый город.",
+            "services": ["Пляж", "Кондиционер", "Открытый бассейн", "Бесплатная парковка", "Бесплатный WiFi", "Вид на море", "Бесплатный завтрак"],
+            "min_price": 2789.00,
+            "currency": "RUR",
+            "rating": 4.5,
+            "reviews_amount": 18,
+            "last_review": "Отличное расположение. Вкусный завтрак. Отдыхали с детьми - все понравилось."
+        },
+        {
+            "name": "Mondrian Suites",
+            "country": "Греция",
+            "address": "Фалираки, Родос, Греция",
+            "stars": 5,
+            "type": "Апартаменты",
+            "description": "Из окон открывается вид на город.К услугам гостей номера-студио с балконом и чайником в 2,7 км от пляжа.",
+            "services": ["Пляж", "Кондиционер", "Открытый бассейн", "Платная парковка", "Бесплатный WiFi", "Вид на море"],
+            "min_price": 3245.20,
+            "currency": "RUR",
+            "rating": 5,
+            "reviews_amount": 4,
+            "last_review": "Потрясающее место, в номере есть все необходимое. Красивый вид на море."
+        },
+        {
+            "name": "Sunny Appartments",
+            "country": "Греция",
+            "address": "Родос, Родос, Греция",
+            "stars": 2,
+            "type": "Апартаменты",
+            "description": "Все номера и апартаменты оборудованы кондиционером и телевизором с плоским экраном. Также в распоряжении гостей тостер и чайник.",
+            "services": ["Пляж", "Кондиционер", "Бесплатная парковка", "Бесплатный WiFi"],
+            "min_price": 1153.00,
+            "currency": "RUR",
+            "rating": 2.4,
+            "reviews_amount": 36,
+            "last_review": "Бассейн очень маленький. Кормят невкусно. Больше не поедем."
+        },
+        {
+            "name": "Super All Inclusive Hotel",
+            "country": "Греция",
+            "address": "Родос, Родос, Греция",
+            "stars": 4,
+            "type": "Отель",
+            "description": "Все номера оснащены телевизором с плоским экраном. Из некоторых номеров открывается вид на море или город.",
+            "services": ["Пляж", "Кондиционер", "Открытый бассейн", "Бесплатный WiFi", "Вид на море", "Бесплатный завтрак"],
+            "min_price": 3689.00,
+            "currency": "RUR",
+            "rating": 4.1,
+            "reviews_amount": 14,
+            "last_review": "Недалёко от пляжа и старого города, вокруг много разных магазинчиков"
+        },
+        {
+            "name": "Adams Hotel",
+            "country": "Греция",
+            "address": "Родос, Родос, Греция",
+            "stars": 3,
+            "type": "Отель",
+            "description": "Отель расположен всего в 100 метрах от пляжа и в 5-ти минутах ходьбы от исторической части города, недалеко от всех основных достопримечательностей. Из отеля открывается вид на море. К услугам гостей спокойный открытый бассейн.",
+            "services": ["Пляж", "Кондиционер", "Открытый бассейн", "Бесплатная парковка", "Бесплатный WiFi", "Бесплатный завтрак"],
+            "min_price": 1896.00,
+            "currency": "RUR",
+            "rating": 0,
+            "reviews_amount": 0,
+            "last_review": ""
+        }
+    ]
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
