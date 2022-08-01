@@ -28,11 +28,10 @@ body, html {
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    position: absolute;
+    position: relative;
     background-color: #fff;
     top: 100%;
     width: 100%;
-    transform: translateY(-100%);
     z-index: 1;
     transition: transform .4s;
     box-shadow: 0 0 5px #000000;
@@ -40,10 +39,6 @@ body, html {
     &::-webkit-scrollbar {
       width: 0;
       background: transparent;
-    }
-
-    &.show {
-      transform: translateY(0);
     }
 
   }
@@ -139,10 +134,5 @@ body, html {
     text-align: center;
     display: block;
     font-size: 20px;
-  }
-}
-@media (max-width: 992px) {
-  .header__list{
-    padding-bottom: 5px;
   }
 }
